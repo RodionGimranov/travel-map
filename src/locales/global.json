@@ -1,0 +1,20 @@
+{
+    "ru": {
+        "message": {
+            "input_placeholder": "Введите название страны",
+
+            "home_tab_title": "Travel Map",
+            "countries_tab_title": "Страны",
+            "continent_tab_title": "Континенты"
+        }
+    },
+    "en": {
+        "message": {
+            "input_placeholder": "Enter the country name",
+
+            "home_tab_title": "Travel Map",
+            "countries_tab_title": "Countries",
+            "continent_tab_title": "Continent"
+        }
+    }
+}
