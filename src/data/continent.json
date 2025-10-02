@@ -1,0 +1,9 @@
+[
+    { "id": "EU", "name": { "ru": "Европа", "en": "Europe" } },
+    { "id": "AS", "name": { "ru": "Азия", "en": "Asia" } },
+    { "id": "AF", "name": { "ru": "Африка", "en": "Africa" } },
+    { "id": "NA", "name": { "ru": "Северная Америка", "en": "North America" } },
+    { "id": "SA", "name": { "ru": "Южная Америка", "en": "South America" } },
+    { "id": "OC", "name": { "ru": "Океания", "en": "Oceania" } },
+    { "id": "AN", "name": { "ru": "Антарктида", "en": "Antarctica" } }
+]
