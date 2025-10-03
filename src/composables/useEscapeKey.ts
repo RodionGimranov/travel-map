@@ -5,9 +5,9 @@ export function useEscapeKeyClose(onCloseCallback: () => void) {
         }
     };
 
-    window.addEventListener("keydown", handleKeydown, true);
+    window.addEventListener("keydown", handleKeydown);
 
     return () => {
-        window.removeEventListener("keydown", handleKeydown, true);
+        window.removeEventListener("keydown", handleKeydown);
     };
 }
