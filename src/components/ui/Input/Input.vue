@@ -1,34 +1,76 @@
 <template>
-    <div class="input_wrapper" :class="{ _focused: isFocused }">
-        <!-- <button class="search_btn"><SvgIcon /></button> -->
+    <div v-if="!$route.meta.hideHeaderInput" class="input_wrapper" :class="{ _focused: isFocused }">
+        <button class="search_btn">
+            <SvgIcon name="search-icon" />
+        </button>
         <input
+            ref="searchInput"
             type="text"
+            v-model="searchQuery"
             :placeholder="t('message.input_placeholder')"
-            @focus="isFocused = true"
-            @blur="isFocused = false"
+            :class="{ _with_text: withText }"
+            @focus="handleFocus"
+            @blur="handleBlur"
         />
-        <transition name="fade" mode="out-in">
-            <p v-if="!isFocused" class="country_request">test</p>
-        </transition>
-        <!-- <button class="clear_btn"><SvgIcon /></button> -->
+        <CountryRequest :show="!isFocused && searchQuery.length === 0" />
+        <button
+            v-show="searchQuery.length > 0"
+            class="clear_input_btn"
+            @click="clearInput"
+            @mousedown.prevent="clearInput"
+        >
+            <SvgIcon name="clear-icon" />
+        </button>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-// import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import { useDropdownStore } from "@/stores/dropdownStore";
+import { useEscapeKeyClose } from "@/composables/useEscapeKey";
+
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import CountryRequest from "@/components/CountryRequest.vue";
 
 const { t } = useI18n();
+const dropdownStore = useDropdownStore();
 
+const searchInput = ref<HTMLInputElement | null>(null);
 const isFocused = ref(false);
+const searchQuery = ref("");
+
+const withText = computed(() => !isFocused.value && searchQuery.value.length > 0);
+
+const clearInput = () => {
+    searchQuery.value = "";
+};
+
+const handleFocus = () => {
+    isFocused.value = true;
+    dropdownStore.open();
+};
+
+const handleBlur = () => {
+    isFocused.value = false;
+    dropdownStore.close();
+};
+
+const handleEscape = () => {
+    if (searchInput.value) {
+        searchInput.value.blur();
+    }
+    handleBlur();
+};
+
+useEscapeKeyClose(handleEscape);
 </script>
 
 <style lang="scss">
 .input_wrapper {
     position: relative;
-    width: 500px;
+    width: 100%;
     height: 38px;
     overflow: hidden;
     transition: 0.2s;
@@ -47,6 +89,14 @@ const isFocused = ref(false);
     }
 }
 
+.search_btn {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    max-height: 20px;
+    pointer-events: none;
+}
+
 input {
     width: 100%;
     height: 100%;
@@ -57,12 +107,16 @@ input {
     font-weight: 500;
     color: $primary_dark;
 
+    &._with_text {
+        color: $fourth_gray;
+    }
+
     &::placeholder {
         opacity: 0;
         transition: 0.2s;
 
         color: $fourth_gray;
-        font-weight: 400;
+        font-weight: 500;
     }
 
     &:focus::placeholder {
@@ -70,19 +124,11 @@ input {
     }
 }
 
-.country_request {
+.clear_input_btn {
     position: absolute;
-    top: 0;
-    left: 40px;
-    height: 100%;
-    pointer-events: none;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    font-size: 14px;
-    font-weight: 500;
-    color: $fourth_gray;
+    top: 9px;
+    right: 12px;
+    max-height: 20px;
+    color: $fourth_white;
 }
 </style>
