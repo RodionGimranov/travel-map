@@ -12,13 +12,13 @@ const routes = [
         path: "/countries-stat",
         name: "countries-stat",
         component: () => import("@/views/CountriesStatPage.vue"),
-        meta: { titleKey: "message.countries_tab_title" },
+        meta: { titleKey: "message.countries_title", hideHeaderInput: true },
     },
     {
         path: "/continent-stat",
         name: "continent-stat",
         component: () => import("@/views/ContinentStatPage.vue"),
-        meta: { titleKey: "message.continent_tab_title" },
+        meta: { titleKey: "message.continent_title", hideHeaderInput: true },
     },
 ];
 
