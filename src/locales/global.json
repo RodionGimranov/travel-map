@@ -4,8 +4,13 @@
             "input_placeholder": "Введите название страны",
 
             "home_tab_title": "Travel Map",
-            "countries_tab_title": "Страны",
-            "continent_tab_title": "Континенты"
+
+            "countries_title": "Страны",
+            "word_title": "Мир",
+            "continent_title": "Континенты",
+
+            "more_info_btn": "Больше",
+            "no_result_title": "Ничего не найденно"
         }
     },
     "en": {
@@ -13,8 +18,13 @@
             "input_placeholder": "Enter the country name",
 
             "home_tab_title": "Travel Map",
-            "countries_tab_title": "Countries",
-            "continent_tab_title": "Continent"
+
+            "countries_title": "Countries",
+            "word_title": "World",
+            "continent_title": "Continent",
+
+            "more_info_btn": "More",
+            "no_result_title": "Nothing found"
         }
     }
 }
