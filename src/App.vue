@@ -11,10 +11,9 @@ import Header from "@/components/layout/Header.vue";
 
 <style lang="scss">
 main {
-    width: 900px;   
+    width: 900px;
     padding: 0 50px;
     background: $primary_white;
-    border: 1px solid green;
 
     display: flex;
     flex-direction: column;

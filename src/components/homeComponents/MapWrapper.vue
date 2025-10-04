@@ -8,7 +8,5 @@
 .world_map_wrapper {
     width: 100%;
     height: 500px;
-
-    background: red;
 }
 </style>
