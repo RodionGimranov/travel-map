@@ -1,5 +1,5 @@
 <template>
-    <div class="dropdown_container" ref="dropdownRef">
+    <div v-if="isOpen" class="dropdown_container" ref="dropdownRef">
         <div class="country_list">
             <CountryListItem v-for="country in countries" :key="country.id" :country="country" />
             <p v-show="countries.length === 0" class="no_result">
@@ -16,6 +16,7 @@ import CountryListItem from "@/components/ui/CountryListItem/CountryListItem.vue
 
 defineProps<{
     countries: LocalizedCountry[];
+    isOpen: boolean;
 }>();
 </script>
 
@@ -27,7 +28,6 @@ defineProps<{
     width: 100%;
     height: 300px;
     overflow: hidden;
-    transition: 0.2s;
     border-radius: 12px;
     padding: 10px 0 10px 10px;
     background: $primary_white;

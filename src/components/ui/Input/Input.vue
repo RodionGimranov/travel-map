@@ -6,18 +6,19 @@
         <input
             ref="searchInput"
             type="text"
-            v-model="searchQuery"
+            :value="modelValue"
+            @input="handleInput"
             :placeholder="t('message.input_placeholder')"
             :class="{ _with_text: withText }"
             @focus="handleFocus"
             @blur="handleBlur"
         />
-        <CountryRequest :show="!isFocused && searchQuery.length === 0" />
+        <CountryRequest :show="!isFocused && modelValue.length === 0" />
         <button
-            v-show="searchQuery.length > 0"
+            v-show="modelValue.length > 0"
             class="clear_input_btn"
-            @click="clearInput"
-            @mousedown.prevent="clearInput"
+            @click="handleClear"
+            @mousedown.prevent="handleClear"
         >
             <SvgIcon name="clear-icon" />
         </button>
@@ -28,43 +29,53 @@
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import { useDropdownStore } from "@/stores/dropdownStore";
-import { useEscapeKeyClose } from "@/composables/useEscapeKey";
-
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import CountryRequest from "@/components/CountryRequest.vue";
 
 const { t } = useI18n();
-const dropdownStore = useDropdownStore();
+
+const props = defineProps<{
+    modelValue: string;
+    isFocused?: boolean;
+}>();
+
+const emit = defineEmits<{
+    (e: "update:modelValue", value: string): void;
+    (e: "focus"): void;
+    (e: "blur"): void;
+    (e: "clear"): void;
+}>();
 
 const searchInput = ref<HTMLInputElement | null>(null);
-const isFocused = ref(false);
-const searchQuery = ref("");
 
-const withText = computed(() => !isFocused.value && searchQuery.value.length > 0);
+const withText = computed(() => !props.isFocused && props.modelValue.length > 0);
 
-const clearInput = () => {
-    searchQuery.value = "";
+const handleInput = (event: Event) => {
+    const target = event.target as HTMLInputElement;
+    emit("update:modelValue", target.value);
 };
 
-const handleFocus = () => {
-    isFocused.value = true;
-    dropdownStore.open();
-};
-
-const handleBlur = () => {
-    isFocused.value = false;
-    dropdownStore.close();
-};
-
-const handleEscape = () => {
+const blurInput = () => {
     if (searchInput.value) {
         searchInput.value.blur();
     }
-    handleBlur();
 };
 
-useEscapeKeyClose(handleEscape);
+const handleFocus = () => {
+    emit("focus");
+};
+
+const handleBlur = () => {
+    emit("blur");
+};
+
+const handleClear = () => {
+    emit("clear");
+};
+
+defineExpose({
+    blurInput,
+});
 </script>
 
 <style lang="scss">
@@ -100,7 +111,7 @@ useEscapeKeyClose(handleEscape);
 input {
     width: 100%;
     height: 100%;
-    cursor: pointer;
+    cursor: text;
     padding-left: 40px;
 
     font-size: 14px;
