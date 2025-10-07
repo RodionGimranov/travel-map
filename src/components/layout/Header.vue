@@ -1,7 +1,7 @@
 <template>
     <header>
         <p class="header_logo_title">Travel Map</p>
-        <div class="search_input_container">
+        <div class="search_input_container" ref="searchContainer">
             <Input
                 ref="inputRef"
                 v-model="query"
@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
 import { useDropdownStore } from "@/stores/dropdownStore";
@@ -42,6 +43,8 @@ const { query, filteredCountries } = useSearch(localizedCountries);
 
 const inputRef = ref<InstanceType<typeof Input> | null>(null);
 
+const searchContainer = ref<HTMLElement | null>(null);
+
 const openDropdown = () => {
     dropdownStore.open();
 };
@@ -57,7 +60,6 @@ const handleInputFocus = () => {
 
 const handleInputBlur = () => {
     isFocused.value = false;
-    closeDropdown();
 };
 
 const handleClearInput = () => {
@@ -65,10 +67,14 @@ const handleClearInput = () => {
 };
 
 const handleEscape = () => {
-    if (inputRef.value) {
-        inputRef.value.blurInput();
-    }
+    inputRef.value?.blurInput();
+    isFocused.value = false;
+    closeDropdown();
 };
+
+onClickOutside(searchContainer, () => {
+    closeDropdown();
+});
 
 const toggleLang = () => {
     locale.value = locale.value === "ru" ? "en" : "ru";
