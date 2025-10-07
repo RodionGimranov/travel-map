@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
-    { path: "/", redirect: "/Home" },
+    { path: "/", redirect: "/home" },
     {
         path: "/home",
         name: "home",
@@ -9,14 +9,14 @@ const routes = [
         meta: { titleKey: "message.home_tab_title" },
     },
     {
-        path: "/countries-stat",
-        name: "countries-stat",
+        path: "/countries",
+        name: "countries",
         component: () => import("@/views/CountriesStatPage.vue"),
         meta: { titleKey: "message.countries_title", hideHeaderInput: true },
     },
     {
-        path: "/continent-stat",
-        name: "continent-stat",
+        path: "/continent",
+        name: "continent",
         component: () => import("@/views/ContinentStatPage.vue"),
         meta: { titleKey: "message.continent_title", hideHeaderInput: true },
     },
