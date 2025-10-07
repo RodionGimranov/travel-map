@@ -1,8 +1,15 @@
 <template>
-    <div v-if="isOpen" class="dropdown_container" ref="dropdownRef">
+    <div v-if="isOpen" class="dropdown_container">
         <div class="country_list">
-            <CountryListItem v-for="country in countries" :key="country.id" :country="country" />
-            <p v-show="countries.length === 0" class="no_result">
+            <CountryListItem
+                v-for="country in countries"
+                :key="country.id"
+                :country="country"
+                listItemHeight="36px"
+                checkboxWidth="24px"
+                checkboxHeight="24px"
+            />
+            <p v-show="countries.length === 0" class="no_result_message">
                 {{ $t("message.no_result_title") }}
             </p>
         </div>
@@ -51,7 +58,7 @@ defineProps<{
     align-items: flex-start;
 }
 
-.no_result {
+.no_result_message {
     width: 100%;
     margin: 20px 0;
 
