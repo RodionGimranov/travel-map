@@ -2,10 +2,7 @@
     <label class="custom-checkbox" :style="{ width: checkboxWidth, height: checkboxHeight }">
         <input id="checkbox-input" type="checkbox" />
         <span class="checkbox_box">
-            <span class="checkmark"></span>
-            <span class="remove">
-                <SvgIcon name="remove-icon" width="12" height="2" />
-            </span>
+            <SvgIcon class="checkmark" name="checkmark-icon" width="16" height="16" />
         </span>
     </label>
 </template>
@@ -13,16 +10,10 @@
 <script setup lang="ts">
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
-const { checkboxWidth, checkboxHeight } = withDefaults(
-    defineProps<{
-        checkboxWidth?: string;
-        checkboxHeight?: string;
-    }>(),
-    {
-        checkboxWidth: "26px",
-        checkboxHeight: "26px",
-    },
-);
+const { checkboxWidth = "26px", checkboxHeight = "26px" } = defineProps<{
+    checkboxWidth?: string;
+    checkboxHeight?: string;
+}>();
 </script>
 
 <style lang="scss">
@@ -41,38 +32,33 @@ input[type="checkbox"] {
 .checkbox_box {
     width: 100%;
     height: 100%;
+    transition: 0.2s;
     border-radius: 100px;
     background: $primary_white;
-    border: 2px solid $fourth_white;
-
+    border: 2px solid $third_blue;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+
+    .checkmark {
+        opacity: 0;
+    }
 }
 
-.checkmark {
-    display: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-}
+input:checked + .checkbox_box {
+    background: $secondary_blue;
+    border: 2px solid $secondary_blue;
 
-input:checked + .checkbox_box .checkmark {
-    display: block;
-    border-radius: 100px;
-    background: $fourth_white;
-    border: 1px solid $primary_white;
-}
-
-.remove {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-}
-
-input:checked + .checkbox_box:hover .remove {
-    display: flex;
+    .checkmark {
+        opacity: 1;
+    }
 }
 </style>
