@@ -5,7 +5,7 @@
             <SvgIcon :name="icon" width="24" height="24" />
         </div>
         <div class="total_card_stat_footer">
-            <p class="total_card_stat_data_quantity">0</p>
+            <p class="total_card_stat_data_quantity">{{ data }}</p>
             <RouterLink v-if="routerTo" :to="routerTo" class="link_to_detailed_stat">
                 {{ $t("message.more_info_btn") }}
             </RouterLink>
@@ -19,6 +19,7 @@ import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 interface Props {
     title: string;
     icon: string;
+    data: number | string;
     routerTo?: string;
 }
 
