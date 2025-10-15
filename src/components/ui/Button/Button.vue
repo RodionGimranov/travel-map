@@ -1,33 +1,67 @@
 <template>
-    <button class="primary_btn" @click="props.action">{{ props.label }}</button>
+    <component
+        :is="buttonType === 'link' ? 'RouterLink' : 'button'"
+        class="primary_btn"
+        :class="buttonStyle"
+        :to="buttonType === 'link' ? to : undefined"
+        :type="buttonType === 'button' ? 'button' : undefined"
+        @click="$emit('click')"
+    >
+        {{ label }}
+    </component>
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(
+withDefaults(
     defineProps<{
-        label: string;
-        action?: () => void;
+        label?: string;
+        buttonStyle?: string;
+        buttonType?: "button" | "link";
+        to?: string;
     }>(),
     {
-        action: () => console.log("Click"),
+        label: "Action",
+        buttonStyle: "_gray",
+        buttonType: "button",
+        to: "",
     },
 );
+
+const emit = defineEmits(["click"]);
 </script>
 
 <style lang="scss">
 .primary_btn {
-    width: 38px;
-    height: 38px;
+    overflow: hidden;
     transition: 0.2s;
     border-radius: 12px;
-    background: $secondary_gray;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 16px;
-    font-weight: 500;
-    color: $third_gray;
+    font-weight: 400;
+
+    &._gray {
+        padding: 8px 16px;
+        background: $secondary_gray;
+        color: $third_gray;
+
+        &:hover {
+            color: $primary_dark;
+        }
+    }
+
+    &._square {
+        width: 38px;
+        height: 38px;
+        background: $secondary_gray;
+        color: $third_gray;
+
+        &:hover {
+            color: $primary_dark;
+        }
+    }
 }
 </style>
