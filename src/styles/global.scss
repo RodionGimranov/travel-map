@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@ body {
     align-items: center;
     font-size: 16px;
     font-weight: 400;
-    color: #000000;
+    color: $primary_dark;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -34,6 +36,7 @@ button {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    line-height: 20px;
 }
 input {
     border: none;
@@ -55,6 +58,10 @@ input {
 .common_card_style {
     overflow: hidden;
     border-radius: 21px;
-    background: #f4f5f5;
-    border: 1px solid #e8e8e8;
+    background: $third_white;
+    border: 1px solid $secondary_white;
+}
+//
+.user_select_none {
+    user-select: none;
 }
