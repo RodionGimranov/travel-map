@@ -10,6 +10,7 @@
             "continent_title": "Континенты",
 
             "more_info_btn": "Больше",
+            "back_btn": "Назад",
             "no_result_title": "Ничего не найденно"
         }
     },
@@ -24,6 +25,7 @@
             "continent_title": "Continent",
 
             "more_info_btn": "More",
+            "back_btn": "Back",
             "no_result_title": "Nothing found"
         }
     }

@@ -1,0 +1,14 @@
+{
+    "ru": {
+        "message": {
+            "empty_country_stat_title": "Пока что пусто",
+            "empty_country_stat_subtitle": "Здесь будут отображаться посещённые вами страны."
+        }
+    },
+    "en": {
+        "message": {
+            "empty_country_stat_title": "So far, it's empty",
+            "empty_country_stat_subtitle": "Your visited countries will appear here."
+        }
+    }
+}
