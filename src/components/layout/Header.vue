@@ -13,13 +13,18 @@
             <Dropdown :is-open="dropdownStore.isOpen" :countries="filteredCountries" />
         </div>
         <nav>
-            <Button :label="locale.toUpperCase()" :action="toggleLang" />
+            <Button
+                class="user_select_none"
+                buttonStyle="_square"
+                :label="currentLangLabel"
+                @click="toggleLang"
+            />
         </nav>
     </header>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
@@ -35,50 +40,36 @@ import Button from "@/components/ui/Button/Button.vue";
 const { locale } = useI18n();
 
 const dropdownStore = useDropdownStore();
-
 const isFocused = ref(false);
 
 const { localizedCountries } = useLocalizedCountries();
 const { query, filteredCountries } = useSearch(localizedCountries);
 
 const inputRef = ref<InstanceType<typeof Input> | null>(null);
-
 const searchContainer = ref<HTMLElement | null>(null);
 
-const openDropdown = () => {
-    dropdownStore.open();
-};
-
-const closeDropdown = () => {
-    dropdownStore.close();
-};
+const openDropdown = () => dropdownStore.open();
+const closeDropdown = () => dropdownStore.close();
 
 const handleInputFocus = () => {
     isFocused.value = true;
     openDropdown();
 };
-
-const handleInputBlur = () => {
-    isFocused.value = false;
-};
-
-const handleClearInput = () => {
-    query.value = "";
-};
-
+const handleInputBlur = () => (isFocused.value = false);
+const handleClearInput = () => (query.value = "");
 const handleEscape = () => {
     inputRef.value?.blurInput();
     isFocused.value = false;
     closeDropdown();
 };
 
-onClickOutside(searchContainer, () => {
-    closeDropdown();
-});
-
 const toggleLang = () => {
     locale.value = locale.value === "ru" ? "en" : "ru";
 };
+
+const currentLangLabel = computed(() => (locale.value === "ru" ? "Ru" : "En"));
+
+onClickOutside(searchContainer, closeDropdown);
 
 useEscapeKeyClose(handleEscape);
 </script>
@@ -96,7 +87,7 @@ header {
 
 .header_logo_title {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: $primary_dark;
 }
 
