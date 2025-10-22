@@ -44,7 +44,7 @@ const emit = defineEmits(["click"]);
     font-weight: 400;
 
     &._gray {
-        padding: 8px 16px;
+        padding: 8px 12px;
         background: $secondary_gray;
         color: $third_gray;
 
