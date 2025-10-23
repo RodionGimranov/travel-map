@@ -115,7 +115,7 @@ input {
     padding-left: 40px;
 
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: $primary_dark;
 
     &._with_text {
@@ -127,7 +127,7 @@ input {
         transition: 0.2s;
 
         color: $fourth_gray;
-        font-weight: 500;
+        font-weight: 400;
     }
 
     &:focus::placeholder {
