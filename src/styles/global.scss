@@ -65,3 +65,18 @@ input {
 .user_select_none {
     user-select: none;
 }
+//
+.stat_page_header {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stat_page_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $primary_dark;
+}
