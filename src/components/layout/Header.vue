@@ -14,6 +14,14 @@
         </div>
         <nav>
             <Button
+                v-if="!$route.meta.hideBackToHomeBtn"
+                :label="$t('message.back_home_btn')"
+                buttonType="link"
+                to="/home"
+                :paddingY="8"
+                :paddingX="12"
+            />
+            <Button
                 class="user_select_none"
                 buttonStyle="_square"
                 :label="currentLangLabel"
@@ -34,7 +42,7 @@ import { useLocalizedCountries } from "@/composables/useLocalizedCountry";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey";
 
 import Input from "@/components/ui/Input/Input.vue";
-import Dropdown from "../ui/Dropdown/Dropdown.vue";
+import Dropdown from "@/components/ui/Dropdown/Dropdown.vue";
 import Button from "@/components/ui/Button/Button.vue";
 
 const { locale } = useI18n();
@@ -55,8 +63,10 @@ const handleInputFocus = () => {
     isFocused.value = true;
     openDropdown();
 };
+
 const handleInputBlur = () => (isFocused.value = false);
 const handleClearInput = () => (query.value = "");
+
 const handleEscape = () => {
     inputRef.value?.blurInput();
     isFocused.value = false;
@@ -100,5 +110,12 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
 }
 </style>
