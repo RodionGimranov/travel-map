@@ -1,0 +1,12 @@
+{
+    "ru": {
+        "message": {
+            "continent_stat_title": "Континенты"
+        }
+    },
+    "en": {
+        "message": {
+            "continent_stat_title": "Continents"
+        }
+    }
+}

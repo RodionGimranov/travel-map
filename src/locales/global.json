@@ -1,31 +1,31 @@
 {
     "ru": {
         "message": {
-            "input_placeholder": "Введите название страны",
-
             "home_tab_title": "Travel Map",
+
+            "input_placeholder": "Введите название страны",
 
             "countries_title": "Страны",
             "word_title": "Мир",
             "continent_title": "Континенты",
 
             "more_info_btn": "Больше",
-            "back_btn": "Назад",
+            "back_home_btn": "Главная",
             "no_result_title": "Ничего не найденно"
         }
     },
     "en": {
         "message": {
-            "input_placeholder": "Enter the country name",
-
             "home_tab_title": "Travel Map",
+
+            "input_placeholder": "Enter the country name",
 
             "countries_title": "Countries",
             "word_title": "World",
             "continent_title": "Continent",
 
             "more_info_btn": "More",
-            "back_btn": "Back",
+            "back_home_btn": "Home",
             "no_result_title": "Nothing found"
         }
     }
