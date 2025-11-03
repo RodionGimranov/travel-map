@@ -36,9 +36,9 @@ import { ref, computed } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
-import { useDropdownStore } from "@/stores/dropdownStore";
 import { useSearch } from "@/composables/useSearch";
-import { useLocalizedCountries } from "@/composables/useLocalizedCountry";
+import { useDropdownStore } from "@/stores/dropdownStore";
+import { useCountries } from "@/composables/useCountries";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey";
 
 import Input from "@/components/ui/Input/Input.vue";
@@ -46,13 +46,12 @@ import Dropdown from "@/components/ui/Dropdown/Dropdown.vue";
 import Button from "@/components/ui/Button/Button.vue";
 
 const { locale } = useI18n();
-
-const dropdownStore = useDropdownStore();
-const isFocused = ref(false);
-
-const { localizedCountries } = useLocalizedCountries();
+const { localizedCountries } = useCountries();
 const { query, filteredCountries } = useSearch(localizedCountries);
 
+const dropdownStore = useDropdownStore();
+
+const isFocused = ref(false);
 const inputRef = ref<InstanceType<typeof Input> | null>(null);
 const searchContainer = ref<HTMLElement | null>(null);
 
@@ -80,7 +79,6 @@ const toggleLang = () => {
 const currentLangLabel = computed(() => (locale.value === "ru" ? "Ru" : "En"));
 
 onClickOutside(searchContainer, closeDropdown);
-
 useEscapeKeyClose(handleEscape);
 </script>
 
