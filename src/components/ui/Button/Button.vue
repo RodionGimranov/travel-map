@@ -49,7 +49,7 @@ const emit = defineEmits(["click"]);
         color: $primary_dark;
 
         &:hover {
-            background: $sixth_gray;
+            background: $fifth_gray;
         }
     }
 
@@ -60,7 +60,7 @@ const emit = defineEmits(["click"]);
         color: $primary_dark;
 
         &:hover {
-            background: $sixth_gray;
+            background: $fifth_gray;
         }
     }
 }

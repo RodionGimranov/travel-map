@@ -5,11 +5,17 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    name: { type: String, required: true },
-    width: { type: [String, Number], default: 20 },
-    height: { type: [String, Number], default: 20 },
-});
+withDefaults(
+    defineProps<{
+        name: string;
+        width?: number;
+        height?: number;
+    }>(),
+    {
+        width: 20,
+        height: 20,
+    },
+);
 </script>
 
 <style lang="scss">
