@@ -2,7 +2,7 @@
     <div class="total_card_stat_container common_card_style">
         <div class="total_card_stat_header">
             <p class="total_card_stat_name">{{ $t(title) }}</p>
-            <SvgIcon :name="icon" width="24" height="24" />
+            <SvgIcon :name="icon" :width="24" :height="24" />
         </div>
         <div class="total_card_stat_footer">
             <p class="total_card_stat_data_quantity">{{ data }}</p>
