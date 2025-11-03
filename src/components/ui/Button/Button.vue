@@ -46,10 +46,10 @@ const emit = defineEmits(["click"]);
     &._gray {
         padding: 8px 12px;
         background: $secondary_gray;
-        color: $third_gray;
+        color: $primary_dark;
 
         &:hover {
-            color: $primary_dark;
+            background: $sixth_gray;
         }
     }
 
@@ -57,10 +57,10 @@ const emit = defineEmits(["click"]);
         width: 38px;
         height: 38px;
         background: $secondary_gray;
-        color: $third_gray;
+        color: $primary_dark;
 
         &:hover {
-            color: $primary_dark;
+            background: $sixth_gray;
         }
     }
 }

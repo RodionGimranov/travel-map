@@ -1,8 +1,6 @@
 <template>
     <div v-if="!$route.meta.hideHeaderInput" class="input_wrapper" :class="{ _focused: isFocused }">
-        <button class="search_btn">
-            <SvgIcon name="search-icon" />
-        </button>
+        <SvgIcon name="search-icon" class="search_icon" />
         <input
             ref="searchInput"
             type="text"
@@ -100,7 +98,7 @@ defineExpose({
     }
 }
 
-.search_btn {
+.search_icon {
     position: absolute;
     top: 9px;
     left: 12px;
