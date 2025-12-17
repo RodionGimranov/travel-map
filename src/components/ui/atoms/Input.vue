@@ -62,12 +62,12 @@ const handleClear = () => {
 <style lang="scss">
 .input_wrapper {
     &:focus-within {
-        border-color: $black-10;
+        border-color: var(--black-10);
     }
 }
 
 input::placeholder {
-    color: $primary-gray;
+    color: var(--primary-gray);
     font-weight: 400;
 }
 </style>

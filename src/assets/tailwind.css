@@ -1,1 +1,15 @@
 @import "tailwindcss";
+@import "@/styles/colors.css";
+
+@theme inline {
+    --color-primary-white: var(--primary-white);
+    --color-primary-dark: var(--primary-dark);
+    --color-primary-gray: var(--primary-gray);
+
+    --color-secondary-white: var(--secondary-white);
+    --color-secondary-gray: var(--secondary-gray);
+
+    --color-third-white: var(--third-white);
+
+    --color-black-10: var(--black-10);
+}

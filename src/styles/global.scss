@@ -1,4 +1,4 @@
-@use "variables" as *;
+@import "@/styles/colors.css";
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +15,17 @@ body,
 }
 body {
     padding: 16px;
-    background: $primary-white;
+    background: var(--primary-white);
     font-size: 16px;
     font-weight: 400;
-    color: $primary-dark;
+    color: var(--primary-dark);
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     line-height: 20px;
+}
+input {
+    background: transparent;
+    border: none;
+    outline: none;
 }
