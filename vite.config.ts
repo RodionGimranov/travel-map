@@ -17,7 +17,6 @@ export default defineConfig({
             scss: {
                 additionalData: `
                     @use "@/styles/global" as *;
-                    @use "@/styles/variables" as *;
                 `,
             },
         },
