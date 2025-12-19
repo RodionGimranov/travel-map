@@ -8,5 +8,7 @@
 
     --third-white: #f4f5f5;
 
+    --black-012: rgba(0, 0, 0, 0.12);
     --black-10: rgba(0, 0, 0, 0.1);
+    --white-90: rgba(255, 255, 255, 0.9);
 }
