@@ -15,7 +15,7 @@
             @focus="handleFocus"
             @blur="handleBlur"
             class="h-full w-full pl-10.5! text-[14px] font-medium"
-            placeholder="Введите название страны"
+            :placeholder="placeholder"
         />
         <button
             v-if="modelValue"
@@ -34,6 +34,7 @@ import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 defineProps<{
     modelValue: string;
+    placeholder?: string;
 }>();
 
 const emit = defineEmits<{
