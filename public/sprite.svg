@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<!-- search-icon -->
+<symbol id="search-icon" viewBox="0 0 20 20" fill="none">
+    <path d="M16.59 16.59L13.2429 13.2424M15 9C15 12.3137 12.3137 15 9 15C5.68629 15 3 12.3137 3 9C3 5.68629 5.68629 3 9 3C12.3137 3 15 5.68629 15 9Z" stroke="#8C8C8C" stroke-width="2" stroke-linecap="square"/>
+</symbol>
+<!-- clear-icon -->
+<symbol id="clear-icon" viewBox="0 0 17 17" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17C13.1944 17 17 13.1943 17 8.5C17 3.80566 13.1944 0 8.5 0C3.80557 0 0 3.80566 0 8.5C0 13.1943 3.80557 17 8.5 17ZM12.2657 4.73438C12.5781 5.04663 12.5781 5.55322 12.2657 5.86572L9.63138 8.5L12.2657 11.1343C12.5781 11.4468 12.5781 11.9534 12.2657 12.2656C11.9533 12.5781 11.4467 12.5781 11.1343 12.2656L8.5 9.63135L5.86569 12.2656C5.55328 12.5781 5.04675 12.5781 4.73431 12.2656C4.42191 11.9534 4.42191 11.4468 4.73431 11.1343L7.36862 8.5L4.73431 5.86572C4.42191 5.55322 4.42191 5.04663 4.73431 4.73438C5.04672 4.42188 5.55325 4.42188 5.86569 4.73438L8.5 7.36865L11.1343 4.73438C11.4467 4.42188 11.9533 4.42188 12.2657 4.73438Z" fill="currentColor"/>
+</symbol>
+<!-- menu-icon -->
+<symbol id="menu-icon" viewBox="0 0 24 24" fill="none">
+    <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 6H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<!-- cross-icon -->
+<symbol id="cross-icon" viewBox="0 0 18 18" fill="none">
+    <path d="M3.33643 3.33633L14.6668 14.6667M14.6668 3.33633L3.33643 14.6667" stroke="black" stroke-width="2" stroke-linecap="round"/>
+</symbol>
+<svg/>
