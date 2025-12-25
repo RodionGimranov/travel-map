@@ -1,5 +1,5 @@
 <template>
-    <header class="mb-12.5 flex w-full items-center justify-between">
+    <header class="mb-12.5! flex w-full items-center justify-between">
         <p class="text-primary-dark text-[18px] font-medium">Travel Map</p>
         <CountrySearch />
         <nav class="flex items-center justify-center gap-3">
