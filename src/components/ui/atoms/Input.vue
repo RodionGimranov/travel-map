@@ -20,7 +20,7 @@
         <button
             v-if="modelValue"
             type="button"
-            class="hover:text-primary-dark text-primary-gray absolute right-3 cursor-pointer"
+            class="hover:text-primary-dark text-primary-gray absolute right-3"
             @mousedown.prevent
             @click="handleClear"
         >
@@ -61,12 +61,6 @@ const handleClear = () => {
 </script>
 
 <style lang="scss">
-.input_wrapper {
-    &:focus-within {
-        border-color: var(--black-10);
-    }
-}
-
 input::placeholder {
     color: var(--primary-gray);
     font-weight: 400;
