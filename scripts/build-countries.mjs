@@ -9,6 +9,7 @@ const CONTINENT_MAP = {
     "North America": "NA",
     "South America": "SA",
     Oceania: "OC",
+    Antarctica: "AN",
 };
 
 const API_URL =
@@ -16,20 +17,24 @@ const API_URL =
 
 const DATA_DIR = path.resolve(process.cwd(), "src/data");
 
+const BASE_PATH = path.join(DATA_DIR, "countries.base.json");
+const STATUS_PATH = path.join(DATA_DIR, "countries.status.json");
+const FINAL_PATH = path.join(DATA_DIR, "countries.data.json");
+const META_PATH = path.join(DATA_DIR, "countries.meta.json");
+
 async function buildCountries() {
     const response = await fetch(API_URL);
-
     if (!response.ok) {
         throw new Error(`Failed to fetch countries: ${response.status}`);
     }
 
     const rawCountries = await response.json();
-
     console.log(`Fetched ${rawCountries.length} raw countries`);
 
     let idCounter = 1;
 
-    const countries = rawCountries
+    // ---------- 1. BUILD BASE ----------
+    const countriesBase = rawCountries
         .map((c) => {
             if (
                 !c.cca2 ||
@@ -82,23 +87,44 @@ async function buildCountries() {
         })
         .filter(Boolean);
 
-    const countriesPath = path.join(DATA_DIR, "countries.json");
-    const metaPath = path.join(DATA_DIR, "countries.meta.json");
+    fs.writeFileSync(BASE_PATH, JSON.stringify(countriesBase, null, 2), "utf-8");
 
-    fs.writeFileSync(countriesPath, JSON.stringify(countries, null, 2), "utf-8");
+    // ---------- 2. READ STATUS ----------
+    if (!fs.existsSync(STATUS_PATH)) {
+        throw new Error(`countries.status.json not found at ${STATUS_PATH}`);
+    }
 
+    const statusData = JSON.parse(fs.readFileSync(STATUS_PATH, "utf-8"));
+    const unSet = new Set(statusData.UN ?? []);
+    const obsSet = new Set(statusData.OBS ?? []);
+
+    // ---------- 3. BUILD FINAL DATA ----------
+    const countriesData = countriesBase.map((country) => ({
+        ...country,
+        status: unSet.has(country.iso2) ? "UN" : obsSet.has(country.iso2) ? "OBS" : "DISP",
+    }));
+
+    fs.writeFileSync(FINAL_PATH, JSON.stringify(countriesData, null, 2), "utf-8");
+
+    // ---------- 4. META ----------
     const meta = {
         source: API_URL,
         generatedAt: new Date().toISOString(),
-        count: countries.length,
+        rawCount: rawCountries.length,
+        baseCount: countriesBase.length,
+        finalCount: countriesData.length,
+        statuses: {
+            UN: unSet.size,
+            OBS: obsSet.size,
+            DISP: countriesData.length - unSet.size - obsSet.size,
+        },
         schemaVersion: 1,
     };
 
-    fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), "utf-8");
+    fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2), "utf-8");
 
-    console.log(`✔ Generated ${countries.length} countries`);
-    console.log(`📄 Saved countries to ${countriesPath}`);
-    console.log(`📄 Saved meta to ${metaPath}`);
+    console.log(`✔ Base countries: ${countriesBase.length}`);
+    console.log(`✔ Final countries: ${countriesData.length}`);
 }
 
 buildCountries().catch((err) => {
