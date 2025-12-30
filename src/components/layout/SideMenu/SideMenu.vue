@@ -27,6 +27,7 @@ import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
+import { useEscapeKey } from "@/composables/useEscapeKey";
 
 import countries from "@/data/countries.data.json";
 
@@ -35,16 +36,21 @@ import SettingsMenu from "@/components/layout/SideMenu/SettingsMenu.vue";
 import CountriesMenu from "@/components/layout/SideMenu/CountriesMenu.vue";
 
 const sideMenuStore = useSideMenuStore();
+const sideMenuRef = ref<HTMLElement | null>(null);
 
 const { locale } = useI18n();
 
 type CountryLocale = "en" | "ru";
 
-const sideMenuRef = ref<HTMLElement | null>(null);
-
-onClickOutside(sideMenuRef, () => {
-    sideMenuStore.close();
-});
+onClickOutside(
+    sideMenuRef,
+    () => {
+        sideMenuStore.close();
+    },
+    {
+        ignore: sideMenuStore.ignoreOutsideRefs,
+    },
+);
 
 const currentLocale = computed<CountryLocale>(() => (locale.value === "ru" ? "ru" : "en"));
 
@@ -70,6 +76,10 @@ const sideMenuSizeClass = computed(() => {
 
     return sideMenuStore.activeMenu ? map[sideMenuStore.activeMenu] : "";
 });
+
+useEscapeKey(() => {
+    sideMenuStore.close();
+});
 </script>
 
 <style lang="scss">
@@ -80,7 +90,7 @@ const sideMenuSizeClass = computed(() => {
     padding: 16px;
     overflow: hidden;
     border-radius: 22px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     background: var(--white-90);
     border: 1px solid var(--black-10);
     box-shadow: 0px 3px 11px var(--black-012);
