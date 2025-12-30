@@ -1,8 +1,8 @@
 <template>
     <div
-        class="border-black-10 bg-white-90 absolute top-11.5 flex max-h-90 min-h-30 w-full flex-col overflow-hidden rounded-xl border backdrop-blur-[2px]"
+        class="border-black-10 bg-white-90 absolute top-11.5 flex max-h-70 min-h-30 w-full flex-col overflow-hidden rounded-xl border shadow-[0_3px_11px_var(--black-012)] backdrop-blur-xs"
     >
-        <div v-if="countries.length" class="w-full overflow-auto p-2!">
+        <div v-if="countries.length" class="w-full overflow-auto p-1.5!">
             <CountryOption
                 v-for="country in countries"
                 :key="country.iso2"
