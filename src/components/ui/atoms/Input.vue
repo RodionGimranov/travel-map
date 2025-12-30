@@ -9,6 +9,7 @@
             class="pointer-events-none absolute left-3"
         />
         <input
+            ref="inputRef"
             type="text"
             :value="modelValue"
             @input="handleInput"
@@ -30,7 +31,11 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+
+const inputRef = ref<HTMLInputElement | null>(null);
 
 defineProps<{
     modelValue: string;
@@ -42,6 +47,15 @@ const emit = defineEmits<{
     (event: "focus"): void;
     (event: "blur"): void;
 }>();
+
+defineExpose({
+    focus: () => {
+        inputRef.value?.focus();
+    },
+    blur: () => {
+        inputRef.value?.blur();
+    },
+});
 
 const handleInput = (event: Event) => {
     emit("update:modelValue", (event.target as HTMLInputElement).value);

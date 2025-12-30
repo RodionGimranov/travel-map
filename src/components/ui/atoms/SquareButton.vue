@@ -6,7 +6,7 @@
     >
         <SvgIcon v-if="icon" :name="icon" :width="iconSizeW" :height="iconSizeH" />
         <span v-else-if="label" class="text-primary-dark text-[16px] leading-none font-medium">
-            {{ label }}
+            {{ $t(label) }}
         </span>
     </button>
 </template>

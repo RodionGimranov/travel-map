@@ -24,7 +24,7 @@ withDefaults(
 
 <style lang="scss">
 ._gray {
-    background: #1c1301;
+    background: rgb(28, 19, 1, 10.98%);
     color: #494846;
 }
 
