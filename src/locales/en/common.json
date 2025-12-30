@@ -1,5 +1,7 @@
 {
     "search_placeholder": "Enter country name",
+    "nothing_found": "Nothing found",
+    "home_page": "Home",
     "back_side_menu": "Menu",
     "read_more": "Read more"
 }
