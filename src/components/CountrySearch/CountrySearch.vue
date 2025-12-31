@@ -7,7 +7,6 @@
             @focus="onFocus"
             @blur="onBlur"
         />
-
         <CountrySearchResults
             v-if="isFocused"
             :countries="filteredCountries"
@@ -22,6 +21,7 @@ import { useI18n } from "vue-i18n";
 
 import type { CountryOptionItem } from "@/types/country.types";
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
+import { useEscapeKey } from "@/composables/useEscapeKey";
 
 import Input from "@/components/ui/atoms/Input.vue";
 import CountrySearchResults from "@/components/CountrySearch/CountrySearchResults.vue";
@@ -71,6 +71,11 @@ const filteredCountries = computed<CountryOptionItem[]>(() => {
         iso2: country.iso2,
         label: country.name[currentLocale.value],
     }));
+});
+
+useEscapeKey(() => {
+    onBlur();
+    inputRef.value?.blur();
 });
 </script>
 
