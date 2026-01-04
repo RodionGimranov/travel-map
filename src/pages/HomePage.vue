@@ -1,5 +1,47 @@
-<template></template>
+<template>
+    <section class="home-page flex h-[calc(100vh-120px)] w-full items-end justify-center">
+        <div class="flex items-start justify-start gap-6.25">
+            <WorldStatsCard
+                v-for="card in worldStatsCards"
+                :key="card.title"
+                :title="card.title"
+                :icon="card.icon"
+                :has-link="card.hasLink"
+                :link-to="card.linkTo"
+            />
+        </div>
+    </section>
+</template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WorldStatsCard from "@/components/stats/WorldStatsCard.vue";
+
+interface WorldStatsCardConfig {
+    title: string;
+    icon: string;
+    hasLink: boolean;
+    linkTo?: string;
+}
+
+const worldStatsCards: WorldStatsCardConfig[] = [
+    {
+        title: "stats.countries_title",
+        icon: "countries-icon",
+        hasLink: true,
+        linkTo: "/countries",
+    },
+    {
+        title: "stats.world_title",
+        icon: "world-icon",
+        hasLink: false,
+    },
+    {
+        title: "stats.continents_title",
+        icon: "continent-icon",
+        hasLink: true,
+        linkTo: "/continents",
+    },
+];
+</script>
 
 <style lang="scss"></style>
