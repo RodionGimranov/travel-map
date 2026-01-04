@@ -6,7 +6,19 @@ const routes = [
         path: "/home",
         name: "homePage",
         component: () => import("@/pages/HomePage.vue"),
-        meta: { titleKey: "TravelMap" },
+        meta: { title: "TravelMap", hideHomeBtn: true },
+    },
+    {
+        path: "/countries",
+        name: "countriesPage",
+        component: () => import("@/pages/CountriesPage.vue"),
+        meta: { title: "Countries" },
+    },
+    {
+        path: "/continents",
+        name: "continentsPage",
+        component: () => import("@/pages/ContinentsPage.vue"),
+        meta: { title: "Continents" },
     },
 ];
 
