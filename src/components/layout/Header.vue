@@ -6,25 +6,21 @@
         </div>
         <nav class="z-10 flex items-center justify-center gap-3">
             <RouterLink to="/home">
-                <SquareButton
+                <Button
                     v-if="!$route.meta.hideHomeBtn"
                     label="common.home_page"
-                    :padding-x="12"
+                    padding-variant="medium"
                 />
             </RouterLink>
-            <SquareButton
+            <Button
                 ref="languageButtonRef"
                 :label="buttonLabel"
                 @mousedown.prevent
                 @click="toggleLanguage"
             />
-            <SquareButton
-                ref="menuButtonRef"
-                icon="menu-icon"
-                :iconSizeW="24"
-                :iconSizeH="24"
-                @click="sideMenuStore.toggle('settings')"
-            />
+            <Button ref="menuButtonRef" @click="sideMenuStore.toggle('settings')">
+                <SvgIcon name="menu-icon" :width="24" :height="24" />
+            </Button>
         </nav>
     </header>
 </template>
@@ -36,7 +32,8 @@ import { useLanguageStore } from "@/stores/useLanguageStore";
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
 
 import CountrySearch from "@/components/CountrySearch/CountrySearch.vue";
-import SquareButton from "@/components/ui/atoms/SquareButton.vue";
+import Button from "@/components/ui/atoms/Button.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const languageStore = useLanguageStore();
 const sideMenuStore = useSideMenuStore();
