@@ -1,5 +1,5 @@
 <template>
-    <Accordion title="Статусы стран и территорий">
+    <Accordion title="sideMenu.accordion_country_status">
         <template #content>
             <div class="flex w-full flex-col">
                 <div
@@ -7,9 +7,11 @@
                     :key="item.code"
                     class="flex w-full flex-col"
                 >
-                    <p class="stat_text_style font-medium">{{ item.code }} - {{ item.title }}</p>
+                    <p class="stat_text_style font-medium">
+                        {{ item.code }} - {{ $t(item.title) }}
+                    </p>
                     <p class="stat_text_style font-normal">
-                        {{ item.description }}
+                        {{ $t(item.description) }}
                     </p>
                     <Divider v-if="index < countryStatuses.length - 1" class="mt-2! mb-2! w-full" />
                 </div>
@@ -31,19 +33,18 @@ interface CountryStatusItem {
 const countryStatuses: CountryStatusItem[] = [
     {
         code: "UN",
-        title: "страны, признанные ООН",
-        description: "Официальные государства - члены Организации Объединённых Наций.",
+        title: "sideMenu.country_status_un_title",
+        description: "sideMenu.country_status_un_description",
     },
     {
         code: "OBS",
-        title: "наблюдатели ООН",
-        description:
-            "Государства или территории со статусом наблюдателя при ООН, без права голоса.",
+        title: "sideMenu.country_status_obs_title",
+        description: "sideMenu.country_status_obs_description",
     },
     {
         code: "DISP",
-        title: "спорные территории",
-        description: "Территории или государства с оспариваемым международным статусом.",
+        title: "sideMenu.country_status_disp_title",
+        description: "sideMenu.country_status_disp_description",
     },
 ];
 </script>
