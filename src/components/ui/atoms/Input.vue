@@ -1,6 +1,6 @@
 <template>
     <div
-        class="input_wrapper bg-secondary-white relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl border border-transparent"
+        class="input_wrapper relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl"
     >
         <SvgIcon
             name="search-icon"
@@ -21,7 +21,7 @@
         <button
             v-if="modelValue"
             type="button"
-            class="hover:text-primary-dark text-primary-gray absolute right-3"
+            class="hover:text-primary-dark text-primary-gray absolute right-3 flex items-center justify-center"
             @mousedown.prevent
             @click="handleClear"
         >
@@ -75,6 +75,16 @@ const handleClear = () => {
 </script>
 
 <style lang="scss">
+.input_wrapper {
+    background: transparent;
+    border: 1px solid var(--color-black-10);
+
+    &:focus-within {
+        border-color: var(--color-primary-blue);
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+}
+
 input::placeholder {
     color: var(--primary-gray);
     font-weight: 400;
