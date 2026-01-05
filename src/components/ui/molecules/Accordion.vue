@@ -4,9 +4,15 @@
     >
         <button type="button" class="flex w-full items-center justify-between" @click="toggle">
             <p class="text-primary-dark text-[16px] font-medium">
-                {{ title }}
+                {{ $t(title) }}
             </p>
-            <SvgIcon name="arrow-icon" :width="18" :height="18" :class="{ 'rotate-90': isOpen }" />
+            <SvgIcon
+                name="arrow-icon"
+                class="rotate-90"
+                :width="18"
+                :height="18"
+                :class="{ 'rotate-270': isOpen }"
+            />
         </button>
         <div v-show="isOpen" class="mt-2!">
             <slot name="content" />
