@@ -5,19 +5,20 @@
         class="common_side_menu justify-start` flex h-137.75 flex-col items-start"
         :class="sideMenuSizeClass"
     >
-        <div class="mb-6.5! flex w-full items-center justify-between">
+        <div class="side_menu_header mb-6.5! flex w-full items-center justify-between">
             <p class="text-primary-dark text-[20px] font-medium">
                 <template v-if="sideMenuTitle">
                     {{ sideMenuTitle }}
                 </template>
                 <template v-else>
-                    {{ $t("common.back_side_menu") }}
+                    {{ $t("sideMenu.side_menu_title") }}
                 </template>
             </p>
             <CloseButton @click="sideMenuStore.close" />
         </div>
         <SettingsMenu v-if="sideMenuStore.isSettingsMenuOpen" />
         <CountriesMenu v-else-if="sideMenuStore.isCountriesMenuOpen" />
+        <div class="side_menu_footer w-full"></div>
     </aside>
 </template>
 
