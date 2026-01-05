@@ -1,0 +1,11 @@
+{
+    "side_menu_title": "Menu",
+
+    "accordion_country_status": "Countries and Territories Statuses",
+    "country_status_un_title": "UN member states",
+    "country_status_un_description": "Sovereign states that are official members of the United Nations.",
+    "country_status_obs_title": "UN observers",
+    "country_status_obs_description": "States or territories with observer status at the United Nations, without voting rights.",
+    "country_status_disp_title": "Disputed territories",
+    "country_status_disp_description": "Territories or states with a contested international status."
+}

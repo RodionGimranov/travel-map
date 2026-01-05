@@ -1,0 +1,12 @@
+{
+    "side_menu_title": "Меню",
+
+    "accordion_country_status": "Статусы стран и территорий",
+
+    "country_status_un_title": "страны, признанные ООН",
+    "country_status_un_description": "Официальные государства - члены Организации Объединённых Наций.",
+    "country_status_obs_title": "наблюдатели ООН",
+    "country_status_obs_description": "Государства или территории со статусом наблюдателя при ООН, без права голоса.",
+    "country_status_disp_title": "спорные территории",
+    "country_status_disp_description": "Территории или государства с оспариваемым международным статусом."
+}
