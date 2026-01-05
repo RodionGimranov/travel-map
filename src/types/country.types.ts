@@ -1,4 +1,5 @@
 import type { ContinentId } from "@/types";
+// import type { CountryStatus } from "@/types";
 
 export interface LocalizedText {
     ru: string;
@@ -25,4 +26,11 @@ export interface Country {
     languages: CountryLanguage[];
     currencies: CountryCurrency[];
     population: number;
+    // status?: CountryStatus;
+    // visited?: boolean;
+}
+
+export interface CountryOptionItem {
+    iso2: string;
+    label: string;
 }
