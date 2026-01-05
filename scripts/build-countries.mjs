@@ -17,10 +17,23 @@ const API_URL =
 
 const DATA_DIR = path.resolve(process.cwd(), "src/data");
 
-const BASE_PATH = path.join(DATA_DIR, "countries.base.json");
-const STATUS_PATH = path.join(DATA_DIR, "countries.status.json");
-const FINAL_PATH = path.join(DATA_DIR, "countries.data.json");
-const META_PATH = path.join(DATA_DIR, "countries.meta.json");
+const SOURCE_DIR = path.join(DATA_DIR, "source");
+const MANUAL_DIR = path.join(DATA_DIR, "manual");
+const BUILD_DIR = path.join(DATA_DIR, "build");
+const META_DIR = path.join(DATA_DIR, "meta");
+
+const BASE_PATH = path.join(SOURCE_DIR, "countries.base.json");
+const STATUS_PATH = path.join(MANUAL_DIR, "countries.status.json");
+const FINAL_PATH = path.join(BUILD_DIR, "countries.data.json");
+const META_PATH = path.join(META_DIR, "countries.meta.json");
+
+function formatDateYYYYMMDDColon(date = new Date()) {
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+
+    return `${yyyy}:${mm}:${dd}`;
+}
 
 async function buildCountries() {
     const response = await fetch(API_URL);
@@ -53,7 +66,10 @@ async function buildCountries() {
             const languages = c.languages
                 ? Object.entries(c.languages).map(([code, name]) => ({
                       code,
-                      name: { en: String(name), ru: String(name) },
+                      name: {
+                          en: String(name),
+                          ru: String(name),
+                      },
                   }))
                 : [];
 
@@ -87,6 +103,7 @@ async function buildCountries() {
         })
         .filter(Boolean);
 
+    fs.mkdirSync(SOURCE_DIR, { recursive: true });
     fs.writeFileSync(BASE_PATH, JSON.stringify(countriesBase, null, 2), "utf-8");
 
     // ---------- 2. READ STATUS ----------
@@ -104,12 +121,18 @@ async function buildCountries() {
         status: unSet.has(country.iso2) ? "UN" : obsSet.has(country.iso2) ? "OBS" : "DISP",
     }));
 
+    fs.mkdirSync(BUILD_DIR, { recursive: true });
     fs.writeFileSync(FINAL_PATH, JSON.stringify(countriesData, null, 2), "utf-8");
 
     // ---------- 4. META ----------
+    const now = new Date();
+
     const meta = {
         source: API_URL,
-        generatedAt: new Date().toISOString(),
+        generatedAt: {
+            iso: now.toISOString(),
+            display: formatDateYYYYMMDDColon(now),
+        },
         rawCount: rawCountries.length,
         baseCount: countriesBase.length,
         finalCount: countriesData.length,
@@ -121,6 +144,7 @@ async function buildCountries() {
         schemaVersion: 1,
     };
 
+    fs.mkdirSync(META_DIR, { recursive: true });
     fs.writeFileSync(META_PATH, JSON.stringify(meta, null, 2), "utf-8");
 
     console.log(`✔ Base countries: ${countriesBase.length}`);
