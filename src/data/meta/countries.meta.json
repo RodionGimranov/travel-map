@@ -1,13 +1,16 @@
 {
     "source": "https://restcountries.com/v3.1/all?fields=name,cca2,cca3,capital,population,languages,currencies,continents",
-    "generatedAt": "2025-12-26T10:30:55.570Z",
+    "generatedAt": {
+        "iso": "2026-01-05T18:54:53.821Z",
+        "display": "2026:01:05"
+    },
     "rawCount": 250,
     "baseCount": 246,
     "finalCount": 246,
     "statuses": {
-        "UN": 6,
+        "UN": 192,
         "OBS": 2,
-        "DISP": 238
+        "DISP": 52
     },
     "schemaVersion": 1
 }
