@@ -26,7 +26,7 @@ import { useEscapeKey } from "@/composables/useEscapeKey";
 import Input from "@/components/ui/atoms/Input.vue";
 import CountrySearchResults from "@/components/CountrySearch/CountrySearchResults.vue";
 
-import countries from "@/data/countries.data.json";
+import countries from "@/data/build/countries.data.json";
 
 type CountryLocale = "en" | "ru";
 
