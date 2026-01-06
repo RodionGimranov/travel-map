@@ -2,5 +2,7 @@
     "search_placeholder": "Enter country name",
     "nothing_found": "Nothing found",
     "home_page": "Home",
-    "read_more": "Read more"
+    "read_more": "Read more",
+    "last_data_update": "Last data update:",
+    "data_source_note": "Key information about countries and territories is obtained from an open"
 }
