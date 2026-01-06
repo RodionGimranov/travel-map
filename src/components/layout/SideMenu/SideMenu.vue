@@ -2,91 +2,49 @@
     <aside
         v-if="sideMenuStore.isOpen"
         ref="sideMenuRef"
-        class="common_side_menu justify-start` flex h-137.75 flex-col items-start"
+        class="common_side_menu flex h-137.75 flex-col items-start"
         :class="sideMenuSizeClass"
     >
-        <div class="side_menu_header mb-6.5! flex w-full items-center justify-between">
-            <p class="text-primary-dark text-[20px] font-medium">
-                <template v-if="countryName">
-                    {{ countryName }}
-                </template>
-                <template v-else>
-                    {{ $t("sideMenu.side_menu_title") }}
-                </template>
-            </p>
+        <div class="mb-6.5! flex w-full items-center justify-between">
+            <div class="flex items-center justify-center gap-2">
+                <p class="text-primary-dark text-[20px] font-medium">
+                    <template v-if="sideMenuStore.isCountriesMenuOpen">
+                        {{ countriesStore.selectedCountryView?.name }}
+                    </template>
+                    <template v-else>
+                        {{ $t("sideMenu.side_menu_title") }}
+                    </template>
+                </p>
+                <Badge
+                    v-if="sideMenuStore.isCountriesMenuOpen && countryBadge"
+                    :label="countryBadge.label"
+                    :badge-type="countryBadge.badgeType"
+                />
+            </div>
             <CloseButton @click="sideMenuStore.close" />
         </div>
         <SettingsMenu v-if="sideMenuStore.isSettingsMenuOpen" />
         <CountriesMenu v-else-if="sideMenuStore.isCountriesMenuOpen" />
-        <div class="side_menu_footer gap- flex w-full flex-col items-start justify-start">
-            <p class="">
-                Основные сведения о странах и территориях получены из открытого
-                <a
-                    :href="REST_COUNTRIES_BASE_URL"
-                    class="underline!"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                >
-                    API REST Countries</a
-                >.
-            </p>
-            <p class="">Последнее обновление данных: {{ generatedAtDisplay }}</p>
-        </div>
     </aside>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { onClickOutside } from "@vueuse/core";
-import { useI18n } from "vue-i18n";
 
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
+import { useCountriesStore } from "@/stores/useCountriesStore";
 import { useEscapeKey } from "@/composables/useEscapeKey";
-import { REST_COUNTRIES_BASE_URL } from "@/constants/appConstants";
-import type { CountriesMeta } from "@/types";
-
-import countries from "@/data/build/countries.data.json";
-import meta from "@/data/meta/countries.meta.json";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 import SettingsMenu from "@/components/layout/SideMenu/SettingsMenu.vue";
 import CountriesMenu from "@/components/layout/SideMenu/CountriesMenu.vue";
+import Badge from "@/components/ui/atoms/Badge.vue";
 
 const sideMenuStore = useSideMenuStore();
-const countriesMeta = meta as CountriesMeta;
+const countriesStore = useCountriesStore();
+
 const sideMenuRef = ref<HTMLElement | null>(null);
-
-const { locale } = useI18n();
-
-type CountryLocale = "en" | "ru";
-
-onClickOutside(
-    sideMenuRef,
-    () => {
-        sideMenuStore.close();
-    },
-    {
-        ignore: sideMenuStore.ignoreOutsideRefs,
-    },
-);
-
-const currentLocale = computed<CountryLocale>(() => (locale.value === "ru" ? "ru" : "en"));
-
-const generatedAtDisplay = computed(() => countriesMeta.generatedAt.display);
-
-const selectedCountry = computed(() => {
-    if (!sideMenuStore.selectedCountryIso2) return null;
-
-    return countries.find((c) => c.iso2 === sideMenuStore.selectedCountryIso2);
-});
-
-const countryName = computed(() => {
-    if (sideMenuStore.isCountriesMenuOpen && selectedCountry.value) {
-        return selectedCountry.value.name[currentLocale.value] ?? selectedCountry.value.name.en;
-    }
-
-    return null;
-});
 
 const sideMenuSizeClass = computed(() => {
     const map = {
@@ -97,8 +55,38 @@ const sideMenuSizeClass = computed(() => {
     return sideMenuStore.activeMenu ? map[sideMenuStore.activeMenu] : "";
 });
 
+const countryBadge = computed<{
+    label: string;
+    badgeType: "gray" | "blue" | "amber";
+} | null>(() => {
+    const status = countriesStore.selectedCountryView?.status;
+
+    if (!status) return null;
+
+    const STATUS_MAP = {
+        DISP: {
+            label: "DISP",
+            badgeType: "gray",
+        },
+        UN: {
+            label: "UN",
+            badgeType: "blue",
+        },
+        OBS: {
+            label: "OBS",
+            badgeType: "amber",
+        },
+    } as const;
+
+    return STATUS_MAP[status] ?? null;
+});
+
 useEscapeKey(() => {
     sideMenuStore.close();
+});
+
+onClickOutside(sideMenuRef, () => sideMenuStore.close(), {
+    ignore: sideMenuStore.ignoreOutsideRefs,
 });
 </script>
 

@@ -2,43 +2,46 @@
     <div class="relative flex w-full max-w-117.5 flex-col gap-2">
         <Input
             ref="inputRef"
-            v-model="search"
+            :model-value="countriesStore.search"
             :placeholder="$t('common.search_placeholder')"
+            @update:model-value="countriesStore.setSearch"
             @focus="onFocus"
             @blur="onBlur"
         />
         <CountrySearchResults
             v-if="isFocused"
-            :countries="filteredCountries"
+            :countries="countriesStore.filteredCountries"
             @select="onSelectCountry"
         />
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
-import type { CountryOptionItem } from "@/types/country.types";
+import { useCountriesStore } from "@/stores/useCountriesStore";
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
 import { useEscapeKey } from "@/composables/useEscapeKey";
 
 import Input from "@/components/ui/atoms/Input.vue";
 import CountrySearchResults from "@/components/CountrySearch/CountrySearchResults.vue";
 
-import countries from "@/data/build/countries.data.json";
-
-type CountryLocale = "en" | "ru";
-
+const countriesStore = useCountriesStore();
 const sideMenuStore = useSideMenuStore();
 
 const { locale } = useI18n();
 
-const search = ref("");
 const isFocused = ref(false);
 const inputRef = ref<InstanceType<typeof Input> | null>(null);
 
-const currentLocale = computed<CountryLocale>(() => (locale.value === "ru" ? "ru" : "en"));
+watch(
+    () => locale.value,
+    (value) => {
+        countriesStore.setLocale(value === "ru" ? "ru" : "en");
+    },
+    { immediate: true },
+);
 
 const onFocus = () => {
     isFocused.value = true;
@@ -49,29 +52,13 @@ const onBlur = () => {
 };
 
 const onSelectCountry = (iso2: string) => {
-    isFocused.value = false;
+    countriesStore.selectCountry(iso2);
+    countriesStore.resetSearch();
+
+    sideMenuStore.open("countries");
+
     inputRef.value?.blur();
-    sideMenuStore.openCountry(iso2);
 };
-
-const filteredCountries = computed<CountryOptionItem[]>(() => {
-    const query = search.value.trim().toLowerCase();
-
-    const source = !query
-        ? countries
-        : countries.filter((country) => {
-              const ru = country.name.ru.toLowerCase();
-              const en = country.name.en.toLowerCase();
-              const iso2 = country.iso2.toLowerCase();
-
-              return ru.includes(query) || en.includes(query) || iso2.includes(query);
-          });
-
-    return source.map((country) => ({
-        iso2: country.iso2,
-        label: country.name[currentLocale.value],
-    }));
-});
 
 useEscapeKey(() => {
     onBlur();
