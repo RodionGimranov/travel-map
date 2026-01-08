@@ -1,37 +1,47 @@
 import { defineStore } from "pinia";
 
-export type SideMenuType = "settings" | "countries" | null;
+type SideMenuType = "countries" | "settings" | null;
+
+interface SideMenuState {
+    isOpen: boolean;
+    activeMenu: SideMenuType;
+    ignoreOutsideRefs: HTMLElement[];
+}
 
 export const useSideMenuStore = defineStore("sideMenu", {
-    state: () => ({
-        activeMenu: null as SideMenuType,
-        selectedCountryIso2: null as string | null,
-        ignoreOutsideRefs: [] as HTMLElement[],
+    state: (): SideMenuState => ({
+        isOpen: false,
+        activeMenu: null,
+        ignoreOutsideRefs: [],
     }),
 
     getters: {
-        isOpen: (state) => state.activeMenu !== null,
-        isSettingsMenuOpen: (state) => state.activeMenu === "settings",
-        isCountriesMenuOpen: (state) => state.activeMenu === "countries",
+        isCountriesMenuOpen(state): boolean {
+            return state.isOpen && state.activeMenu === "countries";
+        },
+
+        isSettingsMenuOpen(state): boolean {
+            return state.isOpen && state.activeMenu === "settings";
+        },
     },
 
     actions: {
         open(menu: SideMenuType) {
+            this.isOpen = true;
             this.activeMenu = menu;
         },
 
-        openCountry(iso2: string) {
-            this.activeMenu = "countries";
-            this.selectedCountryIso2 = iso2;
-        },
-
-        toggle(menu: Exclude<SideMenuType, null>) {
-            this.activeMenu = this.activeMenu === menu ? null : menu;
-        },
-
         close() {
+            this.isOpen = false;
             this.activeMenu = null;
-            this.selectedCountryIso2 = null;
+        },
+
+        toggle(menu: SideMenuType) {
+            if (this.isOpen && this.activeMenu === menu) {
+                this.close();
+            } else {
+                this.open(menu);
+            }
         },
 
         registerIgnoreOutside(el: HTMLElement | null) {
