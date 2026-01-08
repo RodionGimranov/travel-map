@@ -6,6 +6,9 @@ import type {
     CountryOptionItem,
     CountriesMeta,
 } from "@/types/country.types";
+import type { ContinentId } from "@/types";
+
+import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 import { CONTINENT_LABELS } from "@/constants/appConstants";
 
 import countries from "@/data/build/countries.data.json";
@@ -19,7 +22,7 @@ interface CountriesState {
     selectedIso2: string | null;
 }
 
-export const useCountriesStore = defineStore("countries", {
+export const useCountriesStore = defineStore("countriesStore", {
     state: (): CountriesState => ({
         search: "",
         locale: "en",
@@ -29,6 +32,31 @@ export const useCountriesStore = defineStore("countries", {
     getters: {
         currentLocale(state): CountryLocale {
             return state.locale === "ru" ? "ru" : "en";
+        },
+
+        allCountries(): CountryRaw[] {
+            return countries as CountryRaw[];
+        },
+
+        // ALL
+        totalCountriesCount(): number {
+            return (countries as CountryRaw[]).filter(
+                (country) => country.status === "UN" || country.status === "OBS",
+            ).length;
+        },
+
+        // 195
+        totalCountriesAllCount(): number {
+            return (countries as CountryRaw[]).length;
+        },
+
+        // ALL Continents
+        allContinentIds(): ContinentId[] {
+            return Object.keys(CONTINENT_LABELS) as ContinentId[];
+        },
+
+        totalContinentsCount(): number {
+            return this.allContinentIds.length;
         },
 
         meta(): CountriesMeta {
@@ -68,6 +96,8 @@ export const useCountriesStore = defineStore("countries", {
             const c = this.selectedCountry;
             if (!c) return null;
 
+            const travelStatsStore = useTravelStatsStore();
+
             return {
                 iso2: c.iso2,
 
@@ -76,9 +106,7 @@ export const useCountriesStore = defineStore("countries", {
 
                 population: c.population,
                 status: c.status,
-
-                visited: c.visited ?? false,
-
+                visited: travelStatsStore.isVisited(c.iso2),
                 continents: c.continentIds.map((id) => CONTINENT_LABELS[id][this.currentLocale]),
 
                 currencies: c.currencies.map(

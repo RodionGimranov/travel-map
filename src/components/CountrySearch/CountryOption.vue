@@ -6,19 +6,30 @@
         <p class="text-primary-dark text-[16px] font-normal">
             {{ item.label }}
         </p>
+        <SvgIcon
+            v-if="travelStatsStore.isVisited(props.item.iso2)"
+            name="check-icon"
+            :width="18"
+            :height="18"
+        />
     </div>
 </template>
 
 <script setup lang="ts">
 import type { CountryOptionItem } from "@/types/country.types";
+import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 
-defineProps<{
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+
+const props = defineProps<{
     item: CountryOptionItem;
 }>();
 
 const emit = defineEmits<{
     (event: "select", iso2: string): void;
 }>();
+
+const travelStatsStore = useTravelStatsStore();
 </script>
 
 <style lang="scss"></style>
