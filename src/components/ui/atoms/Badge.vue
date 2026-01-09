@@ -1,14 +1,11 @@
 <template>
-    <span
-        class="rounded-[100px] px-2! py-0.5! text-center text-[14px] font-normal"
-        :class="badgeType"
-    >
+    <span class="rounded-md px-1.5! py-0.5! text-center text-[12px] font-medium" :class="badgeType">
         {{ label }}
     </span>
 </template>
 
 <script setup lang="ts">
-type BadgeType = "_gray" | "_blue" | "_orange";
+type BadgeType = "gray" | "blue" | "amber";
 
 withDefaults(
     defineProps<{
@@ -17,24 +14,24 @@ withDefaults(
     }>(),
     {
         label: "Label",
-        badgeType: "_gray",
+        badgeType: "gray",
     },
 );
 </script>
 
 <style lang="scss">
-._gray {
-    background: rgb(28, 19, 1, 10.98%);
-    color: #494846;
+.gray {
+    background: rgb(82, 82, 92, 10%);
+    color: #3f3f46;
 }
 
-._blue {
-    background: #dbeafe;
-    color: #2563eb;
+.blue {
+    background: rgb(43, 127, 255, 15%);
+    color: #1447e6;
 }
 
-._orange {
-    background: #fed7aa;
-    color: #c2410c;
+.amber {
+    background: rgb(255, 185, 0, 20%);
+    color: #bb4d00;
 }
 </style>
