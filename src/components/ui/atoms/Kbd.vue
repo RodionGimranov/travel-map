@@ -1,6 +1,6 @@
 <template>
     <span
-        class="text-primary-gray bg-secondary-white flex h-5 min-w-5 items-center justify-center overflow-hidden rounded-md px-1! text-[14px] font-medium"
+        class="text-primary-gray bg-secondary-white pointer-events-none flex h-5 min-w-5 items-center justify-center overflow-hidden rounded-md px-1! text-[14px] font-medium"
     >
         {{ label }}
     </span>

@@ -15,7 +15,7 @@
             @input="handleInput"
             @focus="handleFocus"
             @blur="handleBlur"
-            class="h-full w-full pl-10.5! text-[14px] font-medium"
+            class="h-full w-full pr-10.5! pl-10.5! text-[14px] font-medium"
             :placeholder="placeholder"
         />
         <button
@@ -27,15 +27,20 @@
         >
             <SvgIcon name="clear-icon" :width="17" :height="17" />
         </button>
+        <Kbd v-if="!isFocused" label="/" class="absolute right-3" />
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
+
+import { useFocusHotkey } from "@/composables/useFocusHotkey";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+import Kbd from "@/components/ui/atoms/Kbd.vue";
 
 const inputRef = ref<HTMLInputElement | null>(null);
+const isFocused = ref(false);
 
 defineProps<{
     modelValue: string;
@@ -62,25 +67,32 @@ const handleInput = (event: Event) => {
 };
 
 const handleFocus = () => {
+    isFocused.value = true;
     emit("focus");
 };
 
 const handleBlur = () => {
+    isFocused.value = false;
     emit("blur");
 };
 
 const handleClear = () => {
     emit("update:modelValue", "");
 };
+
+useFocusHotkey(inputRef, {
+    key: "/",
+    enabled: computed(() => !isFocused.value),
+});
 </script>
 
 <style lang="scss">
 .input_wrapper {
     background: transparent;
-    border: 1px solid var(--color-black-10);
+    border: 1px solid var(--black-10);
 
     &:focus-within {
-        border-color: var(--color-primary-blue);
+        border-color: var(--primary-blue);
         box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
     }
 }
