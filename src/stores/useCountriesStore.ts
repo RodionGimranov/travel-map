@@ -38,19 +38,26 @@ export const useCountriesStore = defineStore("countriesStore", {
             return countries as CountryRaw[];
         },
 
-        // ALL
+        countryByIso2(): Record<string, CountryRaw> {
+            return (countries as CountryRaw[]).reduce<Record<string, CountryRaw>>(
+                (acc, country) => {
+                    acc[country.iso2] = country;
+                    return acc;
+                },
+                {},
+            );
+        },
+
         totalCountriesCount(): number {
             return (countries as CountryRaw[]).filter(
                 (country) => country.status === "UN" || country.status === "OBS",
             ).length;
         },
 
-        // 195
         totalCountriesAllCount(): number {
             return (countries as CountryRaw[]).length;
         },
 
-        // ALL Continents
         allContinentIds(): ContinentId[] {
             return Object.keys(CONTINENT_LABELS) as ContinentId[];
         },
