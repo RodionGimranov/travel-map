@@ -8,5 +8,8 @@
     "country_status_obs_title": "наблюдатели ООН",
     "country_status_obs_description": "Государства или территории со статусом наблюдателя при ООН, без права голоса.",
     "country_status_disp_title": "спорные территории",
-    "country_status_disp_description": "Территории или государства с оспариваемым международным статусом."
+    "country_status_disp_description": "Территории или государства с оспариваемым международным статусом.",
+
+    "add_country_title": "Добавить в посещенные",
+    "remove_country_title": "Удалить из посещенных"
 }

@@ -7,5 +7,9 @@
     "country_status_obs_title": "UN observers",
     "country_status_obs_description": "States or territories with observer status at the United Nations, without voting rights.",
     "country_status_disp_title": "Disputed territories",
-    "country_status_disp_description": "Territories or states with a contested international status."
+    "country_status_disp_description": "Territories or states with a contested international status.",
+
+    "add_country_title": "Add to visited",
+    "remove_country_title": "Remove from visited"
+    
 }
