@@ -9,7 +9,9 @@
             <SvgIcon :name="icon" :width="24" :height="24" />
         </div>
         <div class="flex w-full items-end justify-between">
-            <p class="text-primary-dark text-[26px] font-semibold">0</p>
+            <p class="text-primary-dark text-[24px] leading-7.25 font-semibold">
+                {{ value ?? "-" }}
+            </p>
             <RouterLink
                 v-if="hasLink && linkTo"
                 :to="linkTo"
@@ -27,6 +29,7 @@ import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 defineProps<{
     title: string;
     icon: string;
+    value?: string;
     hasLink: boolean;
     linkTo?: string;
 }>();
