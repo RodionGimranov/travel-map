@@ -15,8 +15,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-type ButtonVariant = "gray";
-type PaddingVariant = "compact" | "medium";
+type ButtonVariant = "gray" | "blue" | "outline";
+type PaddingVariant = "compact" | "medium" | "large";
 type ShapeVariant = "regular" | "pill";
 
 interface Props {
@@ -35,6 +35,7 @@ const props = withDefaults(defineProps<Props>(), {
 const PADDING_MAP: Record<PaddingVariant, number> = {
     compact: 7,
     medium: 12,
+    large: 16,
 };
 
 const RADIUS_MAP: Record<ShapeVariant, number> = {
@@ -60,22 +61,40 @@ const buttonStyle = computed(() => {
 
 <style lang="scss">
 .custom_button {
+    border: 1px solid transparent;
     flex-shrink: 0;
 
     span,
     .custom_btn_text {
         font-size: 16px;
-        font-weight: 500;
-        color: var(--color-primary-dark);
+        font-weight: 400;
     }
 }
 
 .custom_button--gray {
-    background: var(--color-secondary-white);
-    color: var(--color-primary-dark);
+    background: var(--secondary-white);
+    color: var(--primary-dark);
 
     &:hover {
-        background: var(--color-secondary-gray);
+        background: var(--secondary-gray);
+    }
+}
+
+.custom_button--blue {
+    background: var(--secondary-blue);
+    color: var(--primary-white);
+
+    &:hover {
+        background: var(--third-blue);
+    }
+}
+
+.custom_button--outline {
+    border-color: var(--secondary-gray);
+    color: var(--primary-dark);
+
+    &:hover {
+        background: var(--secondary-gray);
     }
 }
 </style>
