@@ -1,7 +1,7 @@
 <template>
     <Header />
     <SideMenu />
-    <main>
+    <main class="flex h-[calc(100vh-120px)] w-full items-start justify-center">
         <RouterView />
     </main>
 </template>
