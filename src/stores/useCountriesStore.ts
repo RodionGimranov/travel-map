@@ -1,12 +1,12 @@
 import { defineStore } from "pinia";
 
 import type {
+    ContinentId,
     CountryRaw,
     CountryView,
     CountryOptionItem,
     CountriesMeta,
-} from "@/types/country.types";
-import type { ContinentId } from "@/types";
+} from "@/types";
 
 import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 import { CONTINENT_LABELS } from "@/constants/appConstants";

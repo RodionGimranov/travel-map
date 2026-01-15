@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CountryOptionItem } from "@/types/country.types";
+import type { CountryOptionItem } from "@/types";
 import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";

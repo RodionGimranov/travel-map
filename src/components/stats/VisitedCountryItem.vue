@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CountryStatus } from "@/types/country.types";
+import type { CountryStatus } from "@/types";
 import { useCountryBadge } from "@/composables/useCountryBadge";
 
 import Badge from "@/components/ui/atoms/Badge.vue";

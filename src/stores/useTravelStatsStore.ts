@@ -1,7 +1,6 @@
 import { defineStore } from "pinia";
 
-import type { CountryStatus } from "@/types/country.types";
-import type { ContinentId } from "@/types";
+import type { ContinentId, CountryStatus } from "@/types";
 import { useCountriesStore } from "@/stores/useCountriesStore";
 
 const VISITED_COUNTRIES_KEY = "visited_countries";

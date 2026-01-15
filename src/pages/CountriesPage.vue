@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import type { CountryStatus } from "@/types/country.types";
+import type { CountryStatus } from "@/types";
 import { useCountriesStore } from "@/stores/useCountriesStore";
 import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 import { useSideMenuStore } from "@/stores/useSideMenuStore";

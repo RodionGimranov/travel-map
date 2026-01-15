@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import type { CountryOptionItem } from "@/types/country.types";
+import type { CountryOptionItem } from "@/types";
 
 import CountryOption from "@/components/CountrySearch/CountryOption.vue";
 
