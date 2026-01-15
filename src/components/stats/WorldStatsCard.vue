@@ -1,6 +1,6 @@
 <template>
     <div
-        class="border-black-10 flex h-39 w-62.5 flex-col items-start justify-between overflow-hidden rounded-[22px] border px-4! pt-4! pb-5.5!"
+        class="border-black-10 bg-primary-white! flex h-39 w-62.5 flex-col items-start justify-between overflow-hidden rounded-[22px] border px-4! pt-4! pb-5.5!"
     >
         <div class="flex w-full items-end justify-between">
             <p class="text-primary-gray text-[18px] font-normal">

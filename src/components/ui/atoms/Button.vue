@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const PADDING_MAP: Record<PaddingVariant, number> = {
-    compact: 7,
+    compact: 6,
     medium: 12,
     large: 16,
 };

@@ -84,6 +84,6 @@ const countryStatuses: CountryStatusItem[] = [
 <style lang="scss">
 .stat_text_style {
     font-size: 14px;
-    color: var(--color-primary-dark);
+    color: var(--primary-dark);
 }
 </style>

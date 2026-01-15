@@ -1,6 +1,6 @@
 <template>
     <div
-        class="input_wrapper relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl"
+        class="input_wrapper bg-primary-white! relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl"
     >
         <SvgIcon
             name="search-icon"

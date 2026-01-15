@@ -1,5 +1,8 @@
 <template>
-    <span class="rounded-md px-1.5! py-0.5! text-center text-[12px] font-medium" :class="badgeType">
+    <span
+        class="rounded-md px-1.5! py-0.5! text-center text-[12px] leading-5! font-medium"
+        :class="badgeType"
+    >
         {{ label }}
     </span>
 </template>

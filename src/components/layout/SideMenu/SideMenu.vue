@@ -5,9 +5,9 @@
         class="common_side_menu flex h-137.75 flex-col items-start"
         :class="sideMenuSizeClass"
     >
-        <div class="mb-6.5! flex w-full items-center justify-between">
-            <div class="flex items-center justify-center gap-2">
-                <p class="text-primary-dark text-[20px] font-medium">
+        <div class="mb-6.5! flex w-full items-start justify-between gap-2">
+            <div class="flex items-start justify-center gap-2">
+                <p class="text-primary-dark text-[20px] leading-6 font-medium">
                     <template v-if="sideMenuStore.isCountriesMenuOpen">
                         {{ countriesStore.selectedCountryView?.name }}
                     </template>
@@ -35,6 +35,7 @@ import { onClickOutside } from "@vueuse/core";
 import { useSideMenuStore } from "@/stores/useSideMenuStore";
 import { useCountriesStore } from "@/stores/useCountriesStore";
 import { useEscapeKey } from "@/composables/useEscapeKey";
+import { useCountryBadge } from "@/composables/useCountryBadge";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 import SettingsMenu from "@/components/layout/SideMenu/SettingsMenu.vue";
@@ -55,31 +56,7 @@ const sideMenuSizeClass = computed(() => {
     return sideMenuStore.activeMenu ? map[sideMenuStore.activeMenu] : "";
 });
 
-const countryBadge = computed<{
-    label: string;
-    badgeType: "gray" | "blue" | "amber";
-} | null>(() => {
-    const status = countriesStore.selectedCountryView?.status;
-
-    if (!status) return null;
-
-    const STATUS_MAP = {
-        DISP: {
-            label: "DISP",
-            badgeType: "gray",
-        },
-        UN: {
-            label: "UN",
-            badgeType: "blue",
-        },
-        OBS: {
-            label: "OBS",
-            badgeType: "amber",
-        },
-    } as const;
-
-    return STATUS_MAP[status] ?? null;
-});
+const { countryBadge } = useCountryBadge(() => countriesStore.selectedCountryView ?? null);
 
 useEscapeKey(() => {
     sideMenuStore.close();
@@ -101,6 +78,6 @@ onClickOutside(sideMenuRef, () => sideMenuStore.close(), {
     backdrop-filter: blur(4px);
     background: var(--white-90);
     border: 1px solid var(--black-10);
-    box-shadow: 0px 3px 11px var(--black-012);
+    box-shadow: 0px 3px 11px var(--black-12);
 }
 </style>
