@@ -1,31 +1,33 @@
 import { defineStore } from "pinia";
 
+import type { CountryStatus } from "@/types/country.types";
 import type { ContinentId } from "@/types";
 import { useCountriesStore } from "@/stores/useCountriesStore";
 
 const VISITED_COUNTRIES_KEY = "visited_countries";
 
 interface TravelStatsState {
-    visitedIso2: Set<string>;
+    visitedIso2: string[];
 }
 
 export const useTravelStatsStore = defineStore("travelStatsStore", {
     state: (): TravelStatsState => ({
-        visitedIso2: new Set<string>(),
+        visitedIso2: [],
     }),
 
     getters: {
+        visitedIso2Set(state): Set<string> {
+            return new Set(state.visitedIso2);
+        },
+
         visitedCount(state): number {
-            return state.visitedIso2.size;
+            return state.visitedIso2.length;
         },
 
-        isVisited: (state) => {
-            return (iso2: string): boolean => {
-                return state.visitedIso2.has(iso2);
-            };
+        isVisited(): (iso2: string) => boolean {
+            return (iso2: string) => this.visitedIso2Set.has(iso2);
         },
 
-        /* ===== X / 195 (UN + OBS) ===== */
         totalCountriesStatCount(): number {
             const countriesStore = useCountriesStore();
             return countriesStore.totalCountriesCount;
@@ -35,7 +37,6 @@ export const useTravelStatsStore = defineStore("travelStatsStore", {
             return `${this.visitedCount}/${this.totalCountriesStatCount}`;
         },
 
-        /* ===== % / (UN + OBS + DISP) ===== */
         totalCountriesAllCount(): number {
             const countriesStore = useCountriesStore();
             return countriesStore.totalCountriesAllCount;
@@ -50,7 +51,6 @@ export const useTravelStatsStore = defineStore("travelStatsStore", {
             return `${Math.round(this.visitedAllPercent)}%`;
         },
 
-        // X / 7
         totalContinentsCount(): number {
             const countriesStore = useCountriesStore();
             return countriesStore.totalContinentsCount;
@@ -60,12 +60,11 @@ export const useTravelStatsStore = defineStore("travelStatsStore", {
             const countriesStore = useCountriesStore();
             const visited = new Set<ContinentId>();
 
-            for (const country of countriesStore.allCountries) {
-                if (!this.visitedIso2.has(country.iso2)) continue;
+            for (const iso2 of this.visitedIso2) {
+                const country = countriesStore.countryByIso2[iso2];
+                if (!country) continue;
 
-                country.continentIds.forEach((id) => {
-                    visited.add(id);
-                });
+                country.continentIds.forEach((id) => visited.add(id));
             }
 
             return visited;
@@ -78,6 +77,32 @@ export const useTravelStatsStore = defineStore("travelStatsStore", {
         visitedContinentsFromTotal(): string {
             return `${this.visitedContinentsCount}/${this.totalContinentsCount}`;
         },
+
+        visitedCountriesList(): {
+            iso2: string;
+            name: string;
+            status: CountryStatus;
+        }[] {
+            const countriesStore = useCountriesStore();
+
+            return [...this.visitedIso2]
+                .reverse()
+                .map((iso2) => {
+                    const country = countriesStore.countryByIso2[iso2];
+                    if (!country || country.status === undefined) return null;
+
+                    return {
+                        iso2: country.iso2,
+                        name: country.name[countriesStore.currentLocale] ?? country.name.en,
+                        status: country.status,
+                    };
+                })
+                .filter(Boolean) as {
+                iso2: string;
+                name: string;
+                status: CountryStatus;
+            }[];
+        },
     },
 
     actions: {
@@ -86,29 +111,45 @@ export const useTravelStatsStore = defineStore("travelStatsStore", {
             if (!raw) return;
 
             try {
-                this.visitedIso2 = new Set(JSON.parse(raw));
+                const parsed = JSON.parse(raw);
+                this.visitedIso2 = Array.isArray(parsed) ? parsed : [];
             } catch {
-                this.visitedIso2.clear();
+                this.visitedIso2 = [];
             }
         },
 
         syncToStorage() {
-            localStorage.setItem(VISITED_COUNTRIES_KEY, JSON.stringify([...this.visitedIso2]));
+            localStorage.setItem(VISITED_COUNTRIES_KEY, JSON.stringify(this.visitedIso2));
+        },
+
+        addVisitedCountry(iso2: string) {
+            if (!iso2) return;
+            if (this.visitedIso2.includes(iso2)) return;
+
+            this.visitedIso2.push(iso2);
+            this.syncToStorage();
+        },
+
+        removeVisitedCountry(iso2: string) {
+            if (!iso2) return;
+
+            const index = this.visitedIso2.indexOf(iso2);
+            if (index === -1) return;
+
+            this.visitedIso2.splice(index, 1);
+            this.syncToStorage();
         },
 
         toggleSelectedCountry() {
             const countriesStore = useCountriesStore();
             const iso2 = countriesStore.selectedIso2;
-
             if (!iso2) return;
 
-            if (this.visitedIso2.has(iso2)) {
-                this.visitedIso2.delete(iso2);
+            if (this.visitedIso2.includes(iso2)) {
+                this.removeVisitedCountry(iso2);
             } else {
-                this.visitedIso2.add(iso2);
+                this.addVisitedCountry(iso2);
             }
-
-            this.syncToStorage();
         },
     },
 });
