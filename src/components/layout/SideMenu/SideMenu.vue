@@ -49,7 +49,7 @@ const sideMenuRef = ref<HTMLElement | null>(null);
 
 const sideMenuSizeClass = computed(() => {
     const map = {
-        settings: "w-113.25",
+        settings: "w-100",
         countries: "w-90.25",
     } as const;
 
@@ -72,7 +72,7 @@ onClickOutside(sideMenuRef, () => sideMenuStore.close(), {
     position: absolute;
     top: 66px;
     right: 16px;
-    padding: 16px;
+    padding: 12px;
     overflow: hidden;
     border-radius: 22px;
     backdrop-filter: blur(4px);
