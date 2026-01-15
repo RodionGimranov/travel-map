@@ -6,10 +6,12 @@
 
     --secondary-white: #f0f0f0;
     --secondary-gray: #e8e8e8;
+    --secondary-blue: #2563eb;
 
     --third-white: #f4f5f5;
+    --third-blue: #4487ff;
 
-    --black-012: rgba(0, 0, 0, 0.12);
     --black-10: rgba(0, 0, 0, 0.1);
+    --black-12: rgba(0, 0, 0, 0.12);
     --white-90: rgba(255, 255, 255, 0.9);
 }

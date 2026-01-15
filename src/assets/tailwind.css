@@ -9,10 +9,12 @@
 
     --color-secondary-white: var(--secondary-white);
     --color-secondary-gray: var(--secondary-gray);
+    --color-secondary-blue: var(--secondary-blue);
 
     --color-third-white: var(--third-white);
+    --color-third-blue: var(--third-blue);
 
-    --color-black-012: var(--black-012);
     --color-black-10: var(--black-10);
+    --color-black-12: var(--black-12);
     --color-white-90: var(--white-90);
 }
