@@ -46,6 +46,6 @@ const dots = computed(() => {
     inset: 0;
     z-index: -100;
     pointer-events: none;
-    color: rgba(161, 161, 161, 0.3);
+    color: var(--gray-30);
 }
 </style>

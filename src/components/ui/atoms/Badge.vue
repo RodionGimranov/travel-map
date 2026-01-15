@@ -24,17 +24,17 @@ withDefaults(
 
 <style lang="scss">
 .gray {
-    background: rgb(82, 82, 92, 10%);
-    color: #3f3f46;
+    background: var(--gray-10);
+    color: var(--third-gray);
 }
 
 .blue {
-    background: rgb(43, 127, 255, 15%);
-    color: #1447e6;
+    background: var(--blue-15);
+    color: var(--fourth-blue);
 }
 
 .amber {
-    background: rgb(255, 185, 0, 20%);
-    color: #bb4d00;
+    background: var(--amber-20);
+    color: var(--primary-amber);
 }
 </style>

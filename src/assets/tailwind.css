@@ -6,15 +6,24 @@
     --color-primary-dark: var(--primary-dark);
     --color-primary-gray: var(--primary-gray);
     --color-primary-blue: var(--primary-blue);
+    --color-primary-amber: var(--primary-amber);
 
     --color-secondary-white: var(--secondary-white);
     --color-secondary-gray: var(--secondary-gray);
     --color-secondary-blue: var(--secondary-blue);
 
     --color-third-white: var(--third-white);
+    --color-third-gray: var(--third-gray);
     --color-third-blue: var(--third-blue);
 
+    --fourth-blue: var(--fourth-blue);
+
+    --color-white-90: var(--white-90);
     --color-black-10: var(--black-10);
     --color-black-12: var(--black-12);
-    --color-white-90: var(--white-90);
+    --color-gray-10: var(--gray-10);
+    --color-gray-30: var(--gray-30);
+    --color-blue-15: var(--blue-15);
+    --color-dark-blue-15: var(--dark-blue-15);
+    --color-amber-20: var(--amber-20);
 }

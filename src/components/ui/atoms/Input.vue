@@ -92,7 +92,7 @@ useFocusHotkey(inputRef, {
 
     &:focus-within {
         border-color: var(--primary-blue);
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        box-shadow: 0 0 0 3px var(--dark-blue-15);
     }
 }
 
