@@ -1,8 +1,8 @@
 {
     "source": "https://restcountries.com/v3.1/all?fields=name,cca2,cca3,capital,population,languages,currencies,continents",
     "generatedAt": {
-        "iso": "2026-01-07T23:53:17.150Z",
-        "display": "2026.01.08"
+        "iso": "2026-01-10T19:15:24.043Z",
+        "display": "2026.01.10"
     },
     "rawCount": 250,
     "baseCount": 246,

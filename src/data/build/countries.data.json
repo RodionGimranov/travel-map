@@ -6,7 +6,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Antigua and Barbuda",
-            "ru": "Antigua and Barbuda"
+            "ru": "Антигуа и Барбуда"
         },
         "capital": {
             "en": "Saint John's",
@@ -40,7 +40,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Bhutan",
-            "ru": "Bhutan"
+            "ru": "Бутан"
         },
         "capital": {
             "en": "Thimphu",
@@ -81,7 +81,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Italy",
-            "ru": "Italy"
+            "ru": "Италия"
         },
         "capital": {
             "en": "Rome",
@@ -122,7 +122,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Tuvalu",
-            "ru": "Tuvalu"
+            "ru": "Тувалу"
         },
         "capital": {
             "en": "Funafuti",
@@ -170,7 +170,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Anguilla",
-            "ru": "Anguilla"
+            "ru": "Ангилья"
         },
         "capital": {
             "en": "The Valley",
@@ -204,7 +204,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Australia",
-            "ru": "Australia"
+            "ru": "Австралия"
         },
         "capital": {
             "en": "Canberra",
@@ -238,7 +238,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Belize",
-            "ru": "Belize"
+            "ru": "Белиз"
         },
         "capital": {
             "en": "Belmopan",
@@ -286,7 +286,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Vanuatu",
-            "ru": "Vanuatu"
+            "ru": "Вануату"
         },
         "capital": {
             "en": "Port Vila",
@@ -334,7 +334,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Belarus",
-            "ru": "Belarus"
+            "ru": "Беларусь"
         },
         "capital": {
             "en": "Minsk",
@@ -375,7 +375,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Mauritius",
-            "ru": "Mauritius"
+            "ru": "Маврикий"
         },
         "capital": {
             "en": "Port Louis",
@@ -423,7 +423,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Laos",
-            "ru": "Laos"
+            "ru": "Лаос"
         },
         "capital": {
             "en": "Vientiane",
@@ -457,7 +457,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Senegal",
-            "ru": "Senegal"
+            "ru": "Сенегал"
         },
         "capital": {
             "en": "Dakar",
@@ -491,7 +491,7 @@
         "continentIds": ["EU", "AS"],
         "name": {
             "en": "Turkey",
-            "ru": "Turkey"
+            "ru": "Турция"
         },
         "capital": {
             "en": "Ankara",
@@ -525,7 +525,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Bolivia",
-            "ru": "Bolivia"
+            "ru": "Боливия"
         },
         "capital": {
             "en": "Sucre",
@@ -580,7 +580,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Sri Lanka",
-            "ru": "Sri Lanka"
+            "ru": "Шри-Ланка"
         },
         "capital": {
             "en": "Sri Jayawardenepura Kotte",
@@ -621,7 +621,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Norfolk Island",
-            "ru": "Norfolk Island"
+            "ru": "Остров Норфолк"
         },
         "capital": {
             "en": "Kingston",
@@ -662,7 +662,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "China",
-            "ru": "China"
+            "ru": "Китай"
         },
         "capital": {
             "en": "Beijing",
@@ -696,7 +696,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Caribbean Netherlands",
-            "ru": "Caribbean Netherlands"
+            "ru": "Карибские Нидерланды"
         },
         "capital": {
             "en": "Kralendijk",
@@ -744,7 +744,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Guernsey",
-            "ru": "Guernsey"
+            "ru": "Гернси"
         },
         "capital": {
             "en": "St. Peter Port",
@@ -799,7 +799,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Sudan",
-            "ru": "Sudan"
+            "ru": "Судан"
         },
         "capital": {
             "en": "Khartoum",
@@ -840,7 +840,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Mayotte",
-            "ru": "Mayotte"
+            "ru": "Майотта"
         },
         "capital": {
             "en": "Mamoudzou",
@@ -874,7 +874,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Barthélemy",
-            "ru": "Saint Barthélemy"
+            "ru": "Сен-Бартелеми"
         },
         "capital": {
             "en": "Gustavia",
@@ -908,7 +908,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Vatican City",
-            "ru": "Vatican City"
+            "ru": "Ватикан"
         },
         "capital": {
             "en": "Vatican City",
@@ -949,7 +949,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Turks and Caicos Islands",
-            "ru": "Turks and Caicos Islands"
+            "ru": "Теркс и Кайкос"
         },
         "capital": {
             "en": "Cockburn Town",
@@ -983,7 +983,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Curaçao",
-            "ru": "Curaçao"
+            "ru": "Кюрасао"
         },
         "capital": {
             "en": "Willemstad",
@@ -1031,7 +1031,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Botswana",
-            "ru": "Botswana"
+            "ru": "Ботсвана"
         },
         "capital": {
             "en": "Gaborone",
@@ -1072,7 +1072,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Benin",
-            "ru": "Benin"
+            "ru": "Бенин"
         },
         "capital": {
             "en": "Porto-Novo",
@@ -1106,7 +1106,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Lithuania",
-            "ru": "Lithuania"
+            "ru": "Литва"
         },
         "capital": {
             "en": "Vilnius",
@@ -1140,7 +1140,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Montserrat",
-            "ru": "Montserrat"
+            "ru": "Монтсеррат"
         },
         "capital": {
             "en": "Plymouth",
@@ -1174,7 +1174,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "British Virgin Islands",
-            "ru": "British Virgin Islands"
+            "ru": "Британские Виргинские острова"
         },
         "capital": {
             "en": "Road Town",
@@ -1208,7 +1208,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Burundi",
-            "ru": "Burundi"
+            "ru": "Бурунди"
         },
         "capital": {
             "en": "Gitega",
@@ -1249,7 +1249,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "United States Minor Outlying Islands",
-            "ru": "United States Minor Outlying Islands"
+            "ru": "Внешние малые острова США"
         },
         "capital": {
             "en": "Washington DC",
@@ -1283,7 +1283,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Ireland",
-            "ru": "Ireland"
+            "ru": "Ирландия"
         },
         "capital": {
             "en": "Dublin",
@@ -1324,7 +1324,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Solomon Islands",
-            "ru": "Solomon Islands"
+            "ru": "Соломоновы Острова"
         },
         "capital": {
             "en": "Honiara",
@@ -1358,7 +1358,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Bermuda",
-            "ru": "Bermuda"
+            "ru": "Бермуды"
         },
         "capital": {
             "en": "Hamilton",
@@ -1392,7 +1392,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Finland",
-            "ru": "Finland"
+            "ru": "Финляндия"
         },
         "capital": {
             "en": "Helsinki",
@@ -1433,7 +1433,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Peru",
-            "ru": "Peru"
+            "ru": "Перу"
         },
         "capital": {
             "en": "Lima",
@@ -1481,7 +1481,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Bangladesh",
-            "ru": "Bangladesh"
+            "ru": "Бангладеш"
         },
         "capital": {
             "en": "Dhaka",
@@ -1515,7 +1515,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Denmark",
-            "ru": "Denmark"
+            "ru": "Дания"
         },
         "capital": {
             "en": "Copenhagen",
@@ -1549,7 +1549,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Vincent and the Grenadines",
-            "ru": "Saint Vincent and the Grenadines"
+            "ru": "Сент-Винсент и Гренадины"
         },
         "capital": {
             "en": "Kingstown",
@@ -1583,7 +1583,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Dominican Republic",
-            "ru": "Dominican Republic"
+            "ru": "Доминиканская Республика"
         },
         "capital": {
             "en": "Santo Domingo",
@@ -1617,7 +1617,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Moldova",
-            "ru": "Moldova"
+            "ru": "Молдова"
         },
         "capital": {
             "en": "Chișinău",
@@ -1651,7 +1651,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Bulgaria",
-            "ru": "Bulgaria"
+            "ru": "Болгария"
         },
         "capital": {
             "en": "Sofia",
@@ -1685,7 +1685,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Costa Rica",
-            "ru": "Costa Rica"
+            "ru": "Коста-Рика"
         },
         "capital": {
             "en": "San José",
@@ -1719,7 +1719,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Namibia",
-            "ru": "Namibia"
+            "ru": "Намибия"
         },
         "capital": {
             "en": "Windhoek",
@@ -1816,7 +1816,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Svalbard and Jan Mayen",
-            "ru": "Svalbard and Jan Mayen"
+            "ru": "Шпицберген и Ян-Майен"
         },
         "capital": {
             "en": "Longyearbyen",
@@ -1850,7 +1850,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Luxembourg",
-            "ru": "Luxembourg"
+            "ru": "Люксембург"
         },
         "capital": {
             "en": "Luxembourg",
@@ -1898,7 +1898,7 @@
         "continentIds": ["EU", "AS"],
         "name": {
             "en": "Russia",
-            "ru": "Russia"
+            "ru": "Россия"
         },
         "capital": {
             "en": "Moscow",
@@ -1932,7 +1932,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "United Arab Emirates",
-            "ru": "United Arab Emirates"
+            "ru": "Объединённые Арабские Эмираты"
         },
         "capital": {
             "en": "Abu Dhabi",
@@ -1966,7 +1966,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Sint Maarten",
-            "ru": "Sint Maarten"
+            "ru": "Синт-Мартен"
         },
         "capital": {
             "en": "Philipsburg",
@@ -2014,7 +2014,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Bahamas",
-            "ru": "Bahamas"
+            "ru": "Багамы"
         },
         "capital": {
             "en": "Nassau",
@@ -2055,7 +2055,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Japan",
-            "ru": "Japan"
+            "ru": "Япония"
         },
         "capital": {
             "en": "Tokyo",
@@ -2089,7 +2089,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Nigeria",
-            "ru": "Nigeria"
+            "ru": "Нигерия"
         },
         "capital": {
             "en": "Abuja",
@@ -2123,7 +2123,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Ghana",
-            "ru": "Ghana"
+            "ru": "Гана"
         },
         "capital": {
             "en": "Accra",
@@ -2157,7 +2157,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Sierra Leone",
-            "ru": "Sierra Leone"
+            "ru": "Сьерра-Леоне"
         },
         "capital": {
             "en": "Freetown",
@@ -2191,7 +2191,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Pierre and Miquelon",
-            "ru": "Saint Pierre and Miquelon"
+            "ru": "Сен-Пьер и Микелон"
         },
         "capital": {
             "en": "Saint-Pierre",
@@ -2225,7 +2225,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Albania",
-            "ru": "Albania"
+            "ru": "Албания"
         },
         "capital": {
             "en": "Tirana",
@@ -2259,7 +2259,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Tokelau",
-            "ru": "Tokelau"
+            "ru": "Токелау"
         },
         "capital": {
             "en": "Fakaofo",
@@ -2307,7 +2307,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Saint Helena, Ascension and Tristan da Cunha",
-            "ru": "Saint Helena, Ascension and Tristan da Cunha"
+            "ru": "Острова Святой Елены, Вознесения и Тристан-да-Кунья"
         },
         "capital": {
             "en": "Jamestown",
@@ -2348,7 +2348,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Tonga",
-            "ru": "Tonga"
+            "ru": "Тонга"
         },
         "capital": {
             "en": "Nuku'alofa",
@@ -2389,7 +2389,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Turkmenistan",
-            "ru": "Turkmenistan"
+            "ru": "Туркменистан"
         },
         "capital": {
             "en": "Ashgabat",
@@ -2430,7 +2430,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Djibouti",
-            "ru": "Djibouti"
+            "ru": "Джибути"
         },
         "capital": {
             "en": "Djibouti",
@@ -2471,7 +2471,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Central African Republic",
-            "ru": "Central African Republic"
+            "ru": "Центральноафриканская Республика"
         },
         "capital": {
             "en": "Bangui",
@@ -2512,7 +2512,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Lebanon",
-            "ru": "Lebanon"
+            "ru": "Ливан"
         },
         "capital": {
             "en": "Beirut",
@@ -2553,7 +2553,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Latvia",
-            "ru": "Latvia"
+            "ru": "Латвия"
         },
         "capital": {
             "en": "Riga",
@@ -2587,7 +2587,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Cocos (Keeling) Islands",
-            "ru": "Cocos (Keeling) Islands"
+            "ru": "Кокосовые (Килинг) острова"
         },
         "capital": {
             "en": "West Island",
@@ -2621,7 +2621,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Gambia",
-            "ru": "Gambia"
+            "ru": "Гамбия"
         },
         "capital": {
             "en": "Banjul",
@@ -2655,7 +2655,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Honduras",
-            "ru": "Honduras"
+            "ru": "Гондурас"
         },
         "capital": {
             "en": "Tegucigalpa",
@@ -2689,7 +2689,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Niue",
-            "ru": "Niue"
+            "ru": "Ниуэ"
         },
         "capital": {
             "en": "Alofi",
@@ -2730,7 +2730,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Mauritania",
-            "ru": "Mauritania"
+            "ru": "Мавритания"
         },
         "capital": {
             "en": "Nouakchott",
@@ -2764,7 +2764,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Kosovo",
-            "ru": "Kosovo"
+            "ru": "Косово"
         },
         "capital": {
             "en": "Pristina",
@@ -2805,7 +2805,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Wallis and Futuna",
-            "ru": "Wallis and Futuna"
+            "ru": "Уоллис и Футуна"
         },
         "capital": {
             "en": "Mata-Utu",
@@ -2839,7 +2839,7 @@
         "continentIds": ["AN"],
         "name": {
             "en": "South Georgia",
-            "ru": "South Georgia"
+            "ru": "Южная Георгия и Южные Сандвичевы острова"
         },
         "capital": {
             "en": "King Edward Point",
@@ -2873,7 +2873,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "French Polynesia",
-            "ru": "French Polynesia"
+            "ru": "Французская Полинезия"
         },
         "capital": {
             "en": "Papeetē",
@@ -2907,7 +2907,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Togo",
-            "ru": "Togo"
+            "ru": "Того"
         },
         "capital": {
             "en": "Lomé",
@@ -2941,7 +2941,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Belgium",
-            "ru": "Belgium"
+            "ru": "Бельгия"
         },
         "capital": {
             "en": "Brussels",
@@ -2989,7 +2989,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Zambia",
-            "ru": "Zambia"
+            "ru": "Замбия"
         },
         "capital": {
             "en": "Lusaka",
@@ -3023,7 +3023,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Cayman Islands",
-            "ru": "Cayman Islands"
+            "ru": "Каймановы острова"
         },
         "capital": {
             "en": "George Town",
@@ -3057,7 +3057,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Pitcairn Islands",
-            "ru": "Pitcairn Islands"
+            "ru": "Острова Питкэрн"
         },
         "capital": {
             "en": "Adamstown",
@@ -3091,7 +3091,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Cook Islands",
-            "ru": "Cook Islands"
+            "ru": "Острова Кука"
         },
         "capital": {
             "en": "Avarua",
@@ -3139,7 +3139,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Madagascar",
-            "ru": "Madagascar"
+            "ru": "Мадагаскар"
         },
         "capital": {
             "en": "Antananarivo",
@@ -3180,7 +3180,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Montenegro",
-            "ru": "Montenegro"
+            "ru": "Черногория"
         },
         "capital": {
             "en": "Podgorica",
@@ -3214,7 +3214,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "South Korea",
-            "ru": "South Korea"
+            "ru": "Южная Корея"
         },
         "capital": {
             "en": "Seoul",
@@ -3248,7 +3248,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Ethiopia",
-            "ru": "Ethiopia"
+            "ru": "Эфиопия"
         },
         "capital": {
             "en": "Addis Ababa",
@@ -3282,7 +3282,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Mongolia",
-            "ru": "Mongolia"
+            "ru": "Монголия"
         },
         "capital": {
             "en": "Ulan Bator",
@@ -3316,7 +3316,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Slovakia",
-            "ru": "Slovakia"
+            "ru": "Словакия"
         },
         "capital": {
             "en": "Bratislava",
@@ -3350,7 +3350,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Cuba",
-            "ru": "Cuba"
+            "ru": "Куба"
         },
         "capital": {
             "en": "Havana",
@@ -3391,7 +3391,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Guatemala",
-            "ru": "Guatemala"
+            "ru": "Гватемала"
         },
         "capital": {
             "en": "Guatemala City",
@@ -3425,7 +3425,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "French Guiana",
-            "ru": "French Guiana"
+            "ru": "Французская Гвиана"
         },
         "capital": {
             "en": "Cayenne",
@@ -3459,7 +3459,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Norway",
-            "ru": "Norway"
+            "ru": "Норвегия"
         },
         "capital": {
             "en": "Oslo",
@@ -3507,7 +3507,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Grenada",
-            "ru": "Grenada"
+            "ru": "Гренада"
         },
         "capital": {
             "en": "St. George's",
@@ -3541,7 +3541,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Réunion",
-            "ru": "Réunion"
+            "ru": "Реюньон"
         },
         "capital": {
             "en": "Saint-Denis",
@@ -3575,7 +3575,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Chile",
-            "ru": "Chile"
+            "ru": "Чили"
         },
         "capital": {
             "en": "Santiago",
@@ -3609,7 +3609,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Colombia",
-            "ru": "Colombia"
+            "ru": "Колумбия"
         },
         "capital": {
             "en": "Bogotá",
@@ -3643,7 +3643,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Saudi Arabia",
-            "ru": "Saudi Arabia"
+            "ru": "Саудовская Аравия"
         },
         "capital": {
             "en": "Riyadh",
@@ -3677,7 +3677,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Israel",
-            "ru": "Israel"
+            "ru": "Израиль"
         },
         "capital": {
             "en": "Jerusalem",
@@ -3718,7 +3718,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Germany",
-            "ru": "Germany"
+            "ru": "Германия"
         },
         "capital": {
             "en": "Berlin",
@@ -3752,7 +3752,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "New Zealand",
-            "ru": "New Zealand"
+            "ru": "Новая Зеландия"
         },
         "capital": {
             "en": "Wellington",
@@ -3800,7 +3800,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Greenland",
-            "ru": "Greenland"
+            "ru": "Гренландия"
         },
         "capital": {
             "en": "Nuuk",
@@ -3834,7 +3834,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Kyrgyzstan",
-            "ru": "Kyrgyzstan"
+            "ru": "Киргизия"
         },
         "capital": {
             "en": "Bishkek",
@@ -3875,7 +3875,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "El Salvador",
-            "ru": "El Salvador"
+            "ru": "Сальвадор"
         },
         "capital": {
             "en": "San Salvador",
@@ -3909,7 +3909,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Faroe Islands",
-            "ru": "Faroe Islands"
+            "ru": "Фарерские острова"
         },
         "capital": {
             "en": "Tórshavn",
@@ -3957,7 +3957,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Palau",
-            "ru": "Palau"
+            "ru": "Палау"
         },
         "capital": {
             "en": "Ngerulmud",
@@ -3998,7 +3998,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Malta",
-            "ru": "Malta"
+            "ru": "Мальта"
         },
         "capital": {
             "en": "Valletta",
@@ -4039,7 +4039,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Syria",
-            "ru": "Syria"
+            "ru": "Сирия"
         },
         "capital": {
             "en": "Damascus",
@@ -4073,7 +4073,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Timor-Leste",
-            "ru": "Timor-Leste"
+            "ru": "Восточный Тимор"
         },
         "capital": {
             "en": "Dili",
@@ -4114,7 +4114,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Croatia",
-            "ru": "Croatia"
+            "ru": "Хорватия"
         },
         "capital": {
             "en": "Zagreb",
@@ -4148,7 +4148,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Papua New Guinea",
-            "ru": "Papua New Guinea"
+            "ru": "Папуа — Новая Гвинея"
         },
         "capital": {
             "en": "Port Moresby",
@@ -4196,7 +4196,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Netherlands",
-            "ru": "Netherlands"
+            "ru": "Нидерланды"
         },
         "capital": {
             "en": "Amsterdam",
@@ -4230,7 +4230,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Liberia",
-            "ru": "Liberia"
+            "ru": "Либерия"
         },
         "capital": {
             "en": "Monrovia",
@@ -4264,7 +4264,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Somalia",
-            "ru": "Somalia"
+            "ru": "Сомали"
         },
         "capital": {
             "en": "Mogadishu",
@@ -4305,7 +4305,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Venezuela",
-            "ru": "Venezuela"
+            "ru": "Венесуэла"
         },
         "capital": {
             "en": "Caracas",
@@ -4339,7 +4339,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Haiti",
-            "ru": "Haiti"
+            "ru": "Гаити"
         },
         "capital": {
             "en": "Port-au-Prince",
@@ -4380,7 +4380,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Algeria",
-            "ru": "Algeria"
+            "ru": "Алжир"
         },
         "capital": {
             "en": "Algiers",
@@ -4414,7 +4414,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Northern Mariana Islands",
-            "ru": "Northern Mariana Islands"
+            "ru": "Северные Марианские острова"
         },
         "capital": {
             "en": "Saipan",
@@ -4462,7 +4462,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Martin",
-            "ru": "Saint Martin"
+            "ru": "Сен-Мартен"
         },
         "capital": {
             "en": "Marigot",
@@ -4496,7 +4496,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Aruba",
-            "ru": "Aruba"
+            "ru": "Аруба"
         },
         "capital": {
             "en": "Oranjestad",
@@ -4537,7 +4537,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Egypt",
-            "ru": "Egypt"
+            "ru": "Египет"
         },
         "capital": {
             "en": "Cairo",
@@ -4571,7 +4571,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Malawi",
-            "ru": "Malawi"
+            "ru": "Малави"
         },
         "capital": {
             "en": "Lilongwe",
@@ -4612,7 +4612,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Equatorial Guinea",
-            "ru": "Equatorial Guinea"
+            "ru": "Экваториальная Гвинея"
         },
         "capital": {
             "en": "Malabo",
@@ -4660,7 +4660,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "United States Virgin Islands",
-            "ru": "United States Virgin Islands"
+            "ru": "Виргинские острова США"
         },
         "capital": {
             "en": "Charlotte Amalie",
@@ -4694,7 +4694,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Ecuador",
-            "ru": "Ecuador"
+            "ru": "Эквадор"
         },
         "capital": {
             "en": "Quito",
@@ -4728,7 +4728,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Uzbekistan",
-            "ru": "Uzbekistan"
+            "ru": "Узбекистан"
         },
         "capital": {
             "en": "Tashkent",
@@ -4769,7 +4769,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Gabon",
-            "ru": "Gabon"
+            "ru": "Габон"
         },
         "capital": {
             "en": "Libreville",
@@ -4803,7 +4803,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "South Sudan",
-            "ru": "South Sudan"
+            "ru": "Южный Судан"
         },
         "capital": {
             "en": "Juba",
@@ -4837,7 +4837,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Iran",
-            "ru": "Iran"
+            "ru": "Иран"
         },
         "capital": {
             "en": "Tehran",
@@ -4871,7 +4871,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Kazakhstan",
-            "ru": "Kazakhstan"
+            "ru": "Казахстан"
         },
         "capital": {
             "en": "Astana",
@@ -4912,7 +4912,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Nicaragua",
-            "ru": "Nicaragua"
+            "ru": "Никарагуа"
         },
         "capital": {
             "en": "Managua",
@@ -4946,7 +4946,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Iceland",
-            "ru": "Iceland"
+            "ru": "Исландия"
         },
         "capital": {
             "en": "Reykjavik",
@@ -4980,7 +4980,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Slovenia",
-            "ru": "Slovenia"
+            "ru": "Словения"
         },
         "capital": {
             "en": "Ljubljana",
@@ -5014,7 +5014,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Guadeloupe",
-            "ru": "Guadeloupe"
+            "ru": "Гваделупа"
         },
         "capital": {
             "en": "Basse-Terre",
@@ -5048,7 +5048,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Cameroon",
-            "ru": "Cameroon"
+            "ru": "Камерун"
         },
         "capital": {
             "en": "Yaoundé",
@@ -5089,7 +5089,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Argentina",
-            "ru": "Argentina"
+            "ru": "Аргентина"
         },
         "capital": {
             "en": "Buenos Aires",
@@ -5130,7 +5130,7 @@
         "continentIds": ["EU", "AS"],
         "name": {
             "en": "Azerbaijan",
-            "ru": "Azerbaijan"
+            "ru": "Азербайджан"
         },
         "capital": {
             "en": "Baku",
@@ -5164,7 +5164,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Uganda",
-            "ru": "Uganda"
+            "ru": "Уганда"
         },
         "capital": {
             "en": "Kampala",
@@ -5205,7 +5205,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Niger",
-            "ru": "Niger"
+            "ru": "Нигер"
         },
         "capital": {
             "en": "Niamey",
@@ -5239,7 +5239,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Christmas Island",
-            "ru": "Christmas Island"
+            "ru": "Остров Рождества"
         },
         "capital": {
             "en": "Flying Fish Cove",
@@ -5273,7 +5273,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Myanmar",
-            "ru": "Myanmar"
+            "ru": "Мьянма"
         },
         "capital": {
             "en": "Naypyidaw",
@@ -5307,7 +5307,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Poland",
-            "ru": "Poland"
+            "ru": "Польша"
         },
         "capital": {
             "en": "Warsaw",
@@ -5341,7 +5341,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Jordan",
-            "ru": "Jordan"
+            "ru": "Иордания"
         },
         "capital": {
             "en": "Amman",
@@ -5375,7 +5375,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Hong Kong",
-            "ru": "Hong Kong"
+            "ru": "Гонконг"
         },
         "capital": {
             "en": "City of Victoria",
@@ -5416,7 +5416,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "DR Congo",
-            "ru": "DR Congo"
+            "ru": "Демократическая Республика Конго"
         },
         "capital": {
             "en": "Kinshasa",
@@ -5478,7 +5478,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Eritrea",
-            "ru": "Eritrea"
+            "ru": "Эритрея"
         },
         "capital": {
             "en": "Asmara",
@@ -5526,7 +5526,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Kiribati",
-            "ru": "Kiribati"
+            "ru": "Кирибати"
         },
         "capital": {
             "en": "South Tarawa",
@@ -5574,7 +5574,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Marshall Islands",
-            "ru": "Marshall Islands"
+            "ru": "Маршалловы Острова"
         },
         "capital": {
             "en": "Majuro",
@@ -5615,7 +5615,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Burkina Faso",
-            "ru": "Burkina Faso"
+            "ru": "Буркина-Фасо"
         },
         "capital": {
             "en": "Ouagadougou",
@@ -5649,7 +5649,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Zimbabwe",
-            "ru": "Zimbabwe"
+            "ru": "Зимбабве"
         },
         "capital": {
             "en": "Harare",
@@ -5781,7 +5781,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Kenya",
-            "ru": "Kenya"
+            "ru": "Кения"
         },
         "capital": {
             "en": "Nairobi",
@@ -5822,7 +5822,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Comoros",
-            "ru": "Comoros"
+            "ru": "Коморы"
         },
         "capital": {
             "en": "Moroni",
@@ -5870,7 +5870,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Gibraltar",
-            "ru": "Gibraltar"
+            "ru": "Гибралтар"
         },
         "capital": {
             "en": "Gibraltar",
@@ -5904,7 +5904,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Brunei",
-            "ru": "Brunei"
+            "ru": "Бруней"
         },
         "capital": {
             "en": "Bandar Seri Begawan",
@@ -5945,7 +5945,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Sweden",
-            "ru": "Sweden"
+            "ru": "Швеция"
         },
         "capital": {
             "en": "Stockholm",
@@ -5979,7 +5979,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Lesotho",
-            "ru": "Lesotho"
+            "ru": "Лесото"
         },
         "capital": {
             "en": "Maseru",
@@ -6027,7 +6027,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Isle of Man",
-            "ru": "Isle of Man"
+            "ru": "Остров Мэн"
         },
         "capital": {
             "en": "Douglas",
@@ -6075,7 +6075,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Micronesia",
-            "ru": "Micronesia"
+            "ru": "Микронезия"
         },
         "capital": {
             "en": "Palikir",
@@ -6109,7 +6109,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Tanzania",
-            "ru": "Tanzania"
+            "ru": "Танзания"
         },
         "capital": {
             "en": "Dodoma",
@@ -6150,7 +6150,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Cape Verde",
-            "ru": "Cape Verde"
+            "ru": "Кабо-Верде"
         },
         "capital": {
             "en": "Praia",
@@ -6184,7 +6184,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Afghanistan",
-            "ru": "Afghanistan"
+            "ru": "Афганистан"
         },
         "capital": {
             "en": "Kabul",
@@ -6232,7 +6232,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Andorra",
-            "ru": "Andorra"
+            "ru": "Андорра"
         },
         "capital": {
             "en": "Andorra la Vella",
@@ -6266,7 +6266,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Greece",
-            "ru": "Greece"
+            "ru": "Греция"
         },
         "capital": {
             "en": "Athens",
@@ -6300,7 +6300,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Vietnam",
-            "ru": "Vietnam"
+            "ru": "Вьетнам"
         },
         "capital": {
             "en": "Hanoi",
@@ -6334,7 +6334,7 @@
         "continentIds": ["AN"],
         "name": {
             "en": "French Southern and Antarctic Lands",
-            "ru": "French Southern and Antarctic Lands"
+            "ru": "Французские Южные и Антарктические территории"
         },
         "capital": {
             "en": "Port-aux-Français",
@@ -6368,7 +6368,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Iraq",
-            "ru": "Iraq"
+            "ru": "Ирак"
         },
         "capital": {
             "en": "Baghdad",
@@ -6416,7 +6416,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Libya",
-            "ru": "Libya"
+            "ru": "Ливия"
         },
         "capital": {
             "en": "Tripoli",
@@ -6450,7 +6450,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Portugal",
-            "ru": "Portugal"
+            "ru": "Португалия"
         },
         "capital": {
             "en": "Lisbon",
@@ -6484,7 +6484,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Pakistan",
-            "ru": "Pakistan"
+            "ru": "Пакистан"
         },
         "capital": {
             "en": "Islamabad",
@@ -6525,7 +6525,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Maldives",
-            "ru": "Maldives"
+            "ru": "Мальдивы"
         },
         "capital": {
             "en": "Malé",
@@ -6559,7 +6559,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Morocco",
-            "ru": "Morocco"
+            "ru": "Марокко"
         },
         "capital": {
             "en": "Rabat",
@@ -6600,7 +6600,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Bosnia and Herzegovina",
-            "ru": "Bosnia and Herzegovina"
+            "ru": "Босния и Герцеговина"
         },
         "capital": {
             "en": "Sarajevo",
@@ -6648,7 +6648,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Samoa",
-            "ru": "Samoa"
+            "ru": "Самоа"
         },
         "capital": {
             "en": "Apia",
@@ -6689,7 +6689,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Palestine",
-            "ru": "Palestine"
+            "ru": "Палестина"
         },
         "capital": {
             "en": "Ramallah",
@@ -6737,7 +6737,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Oman",
-            "ru": "Oman"
+            "ru": "Оман"
         },
         "capital": {
             "en": "Muscat",
@@ -6771,7 +6771,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Bahrain",
-            "ru": "Bahrain"
+            "ru": "Бахрейн"
         },
         "capital": {
             "en": "Manama",
@@ -6805,7 +6805,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "United States",
-            "ru": "United States"
+            "ru": "Соединённые Штаты Америки"
         },
         "capital": {
             "en": "Washington, D.C.",
@@ -6839,7 +6839,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Puerto Rico",
-            "ru": "Puerto Rico"
+            "ru": "Пуэрто-Рико"
         },
         "capital": {
             "en": "San Juan",
@@ -6880,7 +6880,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "British Indian Ocean Territory",
-            "ru": "British Indian Ocean Territory"
+            "ru": "Британская территория в Индийском океане"
         },
         "capital": {
             "en": "Diego Garcia",
@@ -6914,7 +6914,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Jersey",
-            "ru": "Jersey"
+            "ru": "Джерси"
         },
         "capital": {
             "en": "Saint Helier",
@@ -6969,7 +6969,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "North Macedonia",
-            "ru": "North Macedonia"
+            "ru": "Северная Македония"
         },
         "capital": {
             "en": "Skopje",
@@ -7003,7 +7003,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Tunisia",
-            "ru": "Tunisia"
+            "ru": "Тунис"
         },
         "capital": {
             "en": "Tunis",
@@ -7037,7 +7037,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Trinidad and Tobago",
-            "ru": "Trinidad and Tobago"
+            "ru": "Тринидад и Тобаго"
         },
         "capital": {
             "en": "Port of Spain",
@@ -7071,7 +7071,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Estonia",
-            "ru": "Estonia"
+            "ru": "Эстония"
         },
         "capital": {
             "en": "Tallinn",
@@ -7105,7 +7105,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Singapore",
-            "ru": "Singapore"
+            "ru": "Сингапур"
         },
         "capital": {
             "en": "Singapore",
@@ -7160,7 +7160,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Panama",
-            "ru": "Panama"
+            "ru": "Панама"
         },
         "capital": {
             "en": "Panama City",
@@ -7201,7 +7201,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Switzerland",
-            "ru": "Switzerland"
+            "ru": "Швейцария"
         },
         "capital": {
             "en": "Bern",
@@ -7256,7 +7256,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Uruguay",
-            "ru": "Uruguay"
+            "ru": "Уругвай"
         },
         "capital": {
             "en": "Montevideo",
@@ -7290,7 +7290,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Tajikistan",
-            "ru": "Tajikistan"
+            "ru": "Таджикистан"
         },
         "capital": {
             "en": "Dushanbe",
@@ -7331,7 +7331,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Taiwan",
-            "ru": "Taiwan"
+            "ru": "Тайвань"
         },
         "capital": {
             "en": "Taipei",
@@ -7365,7 +7365,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "South Africa",
-            "ru": "South Africa"
+            "ru": "Южно-Африканская Республика"
         },
         "capital": {
             "en": "Pretoria",
@@ -7469,7 +7469,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Liechtenstein",
-            "ru": "Liechtenstein"
+            "ru": "Лихтенштейн"
         },
         "capital": {
             "en": "Vaduz",
@@ -7503,7 +7503,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Brazil",
-            "ru": "Brazil"
+            "ru": "Бразилия"
         },
         "capital": {
             "en": "Brasília",
@@ -7537,7 +7537,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Armenia",
-            "ru": "Armenia"
+            "ru": "Армения"
         },
         "capital": {
             "en": "Yerevan",
@@ -7571,7 +7571,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Georgia",
-            "ru": "Georgia"
+            "ru": "Грузия"
         },
         "capital": {
             "en": "Tbilisi",
@@ -7605,7 +7605,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Åland Islands",
-            "ru": "Åland Islands"
+            "ru": "Аландские острова"
         },
         "capital": {
             "en": "Mariehamn",
@@ -7639,7 +7639,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Qatar",
-            "ru": "Qatar"
+            "ru": "Катар"
         },
         "capital": {
             "en": "Doha",
@@ -7673,7 +7673,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Dominica",
-            "ru": "Dominica"
+            "ru": "Доминика"
         },
         "capital": {
             "en": "Roseau",
@@ -7707,7 +7707,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Ukraine",
-            "ru": "Ukraine"
+            "ru": "Украина"
         },
         "capital": {
             "en": "Kyiv",
@@ -7741,7 +7741,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Guinea",
-            "ru": "Guinea"
+            "ru": "Гвинея"
         },
         "capital": {
             "en": "Conakry",
@@ -7775,7 +7775,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Western Sahara",
-            "ru": "Western Sahara"
+            "ru": "Западная Сахара"
         },
         "capital": {
             "en": "El Aaiún",
@@ -7837,7 +7837,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Czechia",
-            "ru": "Czechia"
+            "ru": "Чехия"
         },
         "capital": {
             "en": "Prague",
@@ -7878,7 +7878,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Austria",
-            "ru": "Austria"
+            "ru": "Австрия"
         },
         "capital": {
             "en": "Vienna",
@@ -7912,7 +7912,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Kitts and Nevis",
-            "ru": "Saint Kitts and Nevis"
+            "ru": "Сент-Китс и Невис"
         },
         "capital": {
             "en": "Basseterre",
@@ -7946,7 +7946,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Saint Lucia",
-            "ru": "Saint Lucia"
+            "ru": "Сент-Люсия"
         },
         "capital": {
             "en": "Castries",
@@ -7980,7 +7980,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Yemen",
-            "ru": "Yemen"
+            "ru": "Йемен"
         },
         "capital": {
             "en": "Sana'a",
@@ -8014,7 +8014,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Rwanda",
-            "ru": "Rwanda"
+            "ru": "Руанда"
         },
         "capital": {
             "en": "Kigali",
@@ -8062,7 +8062,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Monaco",
-            "ru": "Monaco"
+            "ru": "Монако"
         },
         "capital": {
             "en": "Monaco",
@@ -8096,7 +8096,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "São Tomé and Príncipe",
-            "ru": "São Tomé and Príncipe"
+            "ru": "Сан-Томе и Принсипи"
         },
         "capital": {
             "en": "São Tomé",
@@ -8130,7 +8130,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Republic of the Congo",
-            "ru": "Republic of the Congo"
+            "ru": "Республика Конго"
         },
         "capital": {
             "en": "Brazzaville",
@@ -8178,7 +8178,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Paraguay",
-            "ru": "Paraguay"
+            "ru": "Парагвай"
         },
         "capital": {
             "en": "Asunción",
@@ -8219,7 +8219,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Mozambique",
-            "ru": "Mozambique"
+            "ru": "Мозамбик"
         },
         "capital": {
             "en": "Maputo",
@@ -8253,7 +8253,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "France",
-            "ru": "France"
+            "ru": "Франция"
         },
         "capital": {
             "en": "Paris",
@@ -8287,7 +8287,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Eswatini",
-            "ru": "Eswatini"
+            "ru": "Эсватини"
         },
         "capital": {
             "en": "Mbabane",
@@ -8335,7 +8335,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Barbados",
-            "ru": "Barbados"
+            "ru": "Барбадос"
         },
         "capital": {
             "en": "Bridgetown",
@@ -8369,7 +8369,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Spain",
-            "ru": "Spain"
+            "ru": "Испания"
         },
         "capital": {
             "en": "Madrid",
@@ -8424,7 +8424,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Thailand",
-            "ru": "Thailand"
+            "ru": "Таиланд"
         },
         "capital": {
             "en": "Bangkok",
@@ -8458,7 +8458,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Guinea-Bissau",
-            "ru": "Guinea-Bissau"
+            "ru": "Гвинея-Бисау"
         },
         "capital": {
             "en": "Bissau",
@@ -8499,7 +8499,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Angola",
-            "ru": "Angola"
+            "ru": "Ангола"
         },
         "capital": {
             "en": "Luanda",
@@ -8533,7 +8533,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "India",
-            "ru": "India"
+            "ru": "Индия"
         },
         "capital": {
             "en": "New Delhi",
@@ -8581,7 +8581,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Martinique",
-            "ru": "Martinique"
+            "ru": "Мартиника"
         },
         "capital": {
             "en": "Fort-de-France",
@@ -8615,7 +8615,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "New Caledonia",
-            "ru": "New Caledonia"
+            "ru": "Новая Каледония"
         },
         "capital": {
             "en": "Nouméa",
@@ -8649,7 +8649,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Seychelles",
-            "ru": "Seychelles"
+            "ru": "Сейшельские Острова"
         },
         "capital": {
             "en": "Victoria",
@@ -8697,7 +8697,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Falkland Islands",
-            "ru": "Falkland Islands"
+            "ru": "Фолклендские острова"
         },
         "capital": {
             "en": "Stanley",
@@ -8731,7 +8731,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "United Kingdom",
-            "ru": "United Kingdom"
+            "ru": "Великобритания"
         },
         "capital": {
             "en": "London",
@@ -8765,7 +8765,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Fiji",
-            "ru": "Fiji"
+            "ru": "Фиджи"
         },
         "capital": {
             "en": "Suva",
@@ -8813,7 +8813,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "San Marino",
-            "ru": "San Marino"
+            "ru": "Сан-Марино"
         },
         "capital": {
             "en": "City of San Marino",
@@ -8847,7 +8847,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Mali",
-            "ru": "Mali"
+            "ru": "Мали"
         },
         "capital": {
             "en": "Bamako",
@@ -8881,7 +8881,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Canada",
-            "ru": "Canada"
+            "ru": "Канада"
         },
         "capital": {
             "en": "Ottawa",
@@ -8922,7 +8922,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Jamaica",
-            "ru": "Jamaica"
+            "ru": "Ямайка"
         },
         "capital": {
             "en": "Kingston",
@@ -8963,7 +8963,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Nauru",
-            "ru": "Nauru"
+            "ru": "Науру"
         },
         "capital": {
             "en": "Yaren",
@@ -9004,7 +9004,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Indonesia",
-            "ru": "Indonesia"
+            "ru": "Индонезия"
         },
         "capital": {
             "en": "Jakarta",
@@ -9038,7 +9038,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "Guam",
-            "ru": "Guam"
+            "ru": "Гуам"
         },
         "capital": {
             "en": "Hagåtña",
@@ -9086,7 +9086,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Ivory Coast",
-            "ru": "Ivory Coast"
+            "ru": "Кот-д’Ивуар"
         },
         "capital": {
             "en": "Yamoussoukro",
@@ -9120,7 +9120,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Kuwait",
-            "ru": "Kuwait"
+            "ru": "Кувейт"
         },
         "capital": {
             "en": "Kuwait City",
@@ -9154,7 +9154,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Philippines",
-            "ru": "Philippines"
+            "ru": "Филиппины"
         },
         "capital": {
             "en": "Manila",
@@ -9195,7 +9195,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Guyana",
-            "ru": "Guyana"
+            "ru": "Гайана"
         },
         "capital": {
             "en": "Georgetown",
@@ -9229,7 +9229,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Hungary",
-            "ru": "Hungary"
+            "ru": "Венгрия"
         },
         "capital": {
             "en": "Budapest",
@@ -9263,7 +9263,7 @@
         "continentIds": ["NA"],
         "name": {
             "en": "Mexico",
-            "ru": "Mexico"
+            "ru": "Мексика"
         },
         "capital": {
             "en": "Mexico City",
@@ -9297,7 +9297,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "North Korea",
-            "ru": "North Korea"
+            "ru": "Северная Корея"
         },
         "capital": {
             "en": "Pyongyang",
@@ -9331,7 +9331,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Romania",
-            "ru": "Romania"
+            "ru": "Румыния"
         },
         "capital": {
             "en": "Bucharest",
@@ -9365,7 +9365,7 @@
         "continentIds": ["SA"],
         "name": {
             "en": "Suriname",
-            "ru": "Suriname"
+            "ru": "Суринам"
         },
         "capital": {
             "en": "Paramaribo",
@@ -9399,7 +9399,7 @@
         "continentIds": ["OC"],
         "name": {
             "en": "American Samoa",
-            "ru": "American Samoa"
+            "ru": "Американское Самоа"
         },
         "capital": {
             "en": "Pago Pago",
@@ -9440,7 +9440,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Nepal",
-            "ru": "Nepal"
+            "ru": "Непал"
         },
         "capital": {
             "en": "Kathmandu",
@@ -9474,7 +9474,7 @@
         "continentIds": ["AF"],
         "name": {
             "en": "Chad",
-            "ru": "Chad"
+            "ru": "Чад"
         },
         "capital": {
             "en": "N'Djamena",
@@ -9515,7 +9515,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Serbia",
-            "ru": "Serbia"
+            "ru": "Сербия"
         },
         "capital": {
             "en": "Belgrade",
@@ -9549,7 +9549,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Cambodia",
-            "ru": "Cambodia"
+            "ru": "Камбоджа"
         },
         "capital": {
             "en": "Phnom Penh",
@@ -9590,7 +9590,7 @@
         "continentIds": ["AS"],
         "name": {
             "en": "Malaysia",
-            "ru": "Malaysia"
+            "ru": "Малайзия"
         },
         "capital": {
             "en": "Kuala Lumpur",
@@ -9631,7 +9631,7 @@
         "continentIds": ["EU"],
         "name": {
             "en": "Cyprus",
-            "ru": "Cyprus"
+            "ru": "Кипр"
         },
         "capital": {
             "en": "Nicosia",
