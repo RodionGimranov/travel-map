@@ -1,5 +1,5 @@
 <template>
-    <section class="home-page flex h-[calc(100vh-120px)] w-full items-end justify-center">
+    <section class="home-page flex h-full w-full items-end justify-center">
         <div class="flex items-start justify-start gap-6.25">
             <WorldStatsCard
                 v-for="card in worldStatsCards"
@@ -12,6 +12,7 @@
             />
         </div>
     </section>
+    <DottedBackground />
 </template>
 
 <script setup lang="ts">
@@ -20,6 +21,7 @@ import { computed } from "vue";
 import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 
 import WorldStatsCard from "@/components/stats/WorldStatsCard.vue";
+import DottedBackground from "@/components/ui/organisms/DottedBackground.vue";
 
 const travelStatsStore = useTravelStatsStore();
 
