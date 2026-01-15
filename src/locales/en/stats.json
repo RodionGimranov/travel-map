@@ -2,5 +2,6 @@
     "countries_title": "Countries",
     "world_title": "World",
     "continents_title": "Continents",
-    "visited_countries_title": "Visited countries"
+    "visited_countries_title": "Visited countries and territories",
+    "visited_countinents_title": "Visited continents"
 }
