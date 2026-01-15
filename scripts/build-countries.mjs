@@ -26,16 +26,32 @@ const BASE_PATH = path.join(SOURCE_DIR, "countries.base.json");
 const STATUS_PATH = path.join(MANUAL_DIR, "countries.status.json");
 const FINAL_PATH = path.join(BUILD_DIR, "countries.data.json");
 const META_PATH = path.join(META_DIR, "countries.meta.json");
+const RU_NAMES_PATH = path.join(MANUAL_DIR, "countries.ru.json");
 
 function formatDateYYYYMMDDColon(date = new Date()) {
     const yyyy = date.getFullYear();
     const mm = String(date.getMonth() + 1).padStart(2, "0");
     const dd = String(date.getDate()).padStart(2, "0");
+    return `${yyyy}.${mm}.${dd}`;
+}
 
-    return `${yyyy}:${mm}:${dd}`;
+// ---------- RU NAMES ----------
+let ruNamesByIso2 = {};
+
+function getRuCountryName(iso2, fallback) {
+    return ruNamesByIso2[iso2] ?? fallback;
 }
 
 async function buildCountries() {
+    // ---------- LOAD RU ----------
+    if (!fs.existsSync(RU_NAMES_PATH)) {
+        throw new Error(`countries.ru.json not found at ${RU_NAMES_PATH}`);
+    }
+
+    ruNamesByIso2 = JSON.parse(fs.readFileSync(RU_NAMES_PATH, "utf-8"));
+    console.log(`Loaded RU names: ${Object.keys(ruNamesByIso2).length}`);
+
+    // ---------- FETCH ----------
     const response = await fetch(API_URL);
     if (!response.ok) {
         throw new Error(`Failed to fetch countries: ${response.status}`);
@@ -62,6 +78,10 @@ async function buildCountries() {
             const continentIds = c.continents.map((name) => CONTINENT_MAP[name]).filter(Boolean);
 
             if (!continentIds.length) return null;
+
+            if (!ruNamesByIso2[c.cca2]) {
+                console.warn(`⚠ Missing RU name for ${c.cca2}: ${c.name.common}`);
+            }
 
             const languages = c.languages
                 ? Object.entries(c.languages).map(([code, name]) => ({
@@ -90,7 +110,7 @@ async function buildCountries() {
                 continentIds,
                 name: {
                     en: c.name.common,
-                    ru: c.name.common,
+                    ru: getRuCountryName(c.cca2, c.name.common),
                 },
                 capital: {
                     en: c.capital[0],
@@ -115,7 +135,7 @@ async function buildCountries() {
     const unSet = new Set(statusData.UN ?? []);
     const obsSet = new Set(statusData.OBS ?? []);
 
-    // ---------- 3. BUILD FINAL DATA ----------
+    // ---------- 3. FINAL ----------
     const countriesData = countriesBase.map((country) => ({
         ...country,
         status: unSet.has(country.iso2) ? "UN" : obsSet.has(country.iso2) ? "OBS" : "DISP",
