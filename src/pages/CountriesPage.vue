@@ -1,9 +1,14 @@
 <template>
     <section class="flex w-200 max-w-200 flex-col items-start justify-start">
-        <div class="mb-7.5! flex w-full items-end justify-between">
-            <p class="text-primary-dark text-[20px] leading-6 font-medium">
-                {{ $t("stats.visited_countries_title") }}
-            </p>
+        <div class="mb-7.5! flex w-full items-start justify-between">
+            <div class="flex flex-col items-start justify-start gap-0.5">
+                <p class="text-primary-dark text-[20px] leading-6 font-medium">
+                    {{ $t("stats.visited_countries_title") }}
+                </p>
+                <p class="text-primary-gray text-[14px] font-normal">
+                    Учитываются все страны и территории
+                </p>
+            </div>
             <p class="text-primary-gray text-[16px] font-normal">
                 {{ travelStatsStore.visitedFromStatTotal }}
             </p>

@@ -1,6 +1,6 @@
 <template>
     <header class="relative mb-12.5! flex w-full items-center justify-between">
-        <p class="text-primary-dark z-10 text-[18px] font-medium">Travel Map</p>
+        <p class="text-primary-dark z-10 text-[18px] leading-5.5 font-medium">Travel Map</p>
         <div class="absolute flex w-full items-center justify-center">
             <CountrySearch />
         </div>

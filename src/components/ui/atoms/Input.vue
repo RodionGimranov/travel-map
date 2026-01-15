@@ -1,6 +1,6 @@
 <template>
     <div
-        class="input_wrapper bg-primary-white! relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl"
+        class="input_wrapper bg-primary-white relative flex h-9.5 w-full items-center justify-start gap-2.5 rounded-xl"
     >
         <SvgIcon
             name="search-icon"
@@ -88,7 +88,6 @@ useFocusHotkey(inputRef, {
 
 <style lang="scss">
 .input_wrapper {
-    background: transparent;
     border: 1px solid var(--black-10);
 
     &:focus-within {
