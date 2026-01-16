@@ -20,8 +20,8 @@ import { computed } from "vue";
 
 import { useTravelStatsStore } from "@/stores/useTravelStatsStore";
 
-import WorldStatsCard from "@/components/stats/WorldStatsCard.vue";
-import DottedBackground from "@/components/ui/organisms/DottedBackground.vue";
+import WorldStatsCard from "@/components/ui/organisms/WorldStatsCard.vue";
+import DottedBackground from "@/components/ui/atoms/DottedBackground.vue";
 
 const travelStatsStore = useTravelStatsStore();
 
