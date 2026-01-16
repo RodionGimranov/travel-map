@@ -45,7 +45,8 @@ const worldStatsCards = computed<WorldStatsCardConfig[]>(() => [
         title: "stats.world_title",
         icon: "world-icon",
         value: travelStatsStore.visitedAllPercentRounded,
-        hasLink: false,
+        hasLink: true,
+        linkTo: "/generalData",
     },
     {
         title: "stats.continents_title",

@@ -20,6 +20,12 @@ const routes = [
         component: () => import("@/pages/ContinentsPage.vue"),
         meta: { title: "Continents" },
     },
+    {
+        path: "/generalData",
+        name: "genetalDataPage",
+        component: () => import("@/pages/GeneralDataPage.vue"),
+        meta: { title: "Deneral Data" },
+    },
 ];
 
 const router = createRouter({
