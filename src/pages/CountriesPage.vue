@@ -6,7 +6,7 @@
                     {{ $t("stats.visited_countries_title") }}
                 </p>
                 <p class="text-primary-gray text-[14px] font-normal">
-                    Учитываются все страны и территории
+                    {{ $t("stats.visited_countries_subtitle") }}
                 </p>
             </div>
             <p class="text-primary-gray text-[16px] font-normal">
