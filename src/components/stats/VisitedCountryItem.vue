@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-secondary-white hover:bg-secondary-gray flex max-h-11 min-h-11 w-full cursor-pointer items-center justify-between rounded-xl px-4! py-2.5!"
+        class="bg-third-white hover:bg-fourth-white flex max-h-11 min-h-11 w-full cursor-pointer items-center justify-between rounded-xl px-4! py-2.5!"
         @click="emit('select', iso2)"
     >
         <p class="text-primary-dark text-[16px] font-normal">
