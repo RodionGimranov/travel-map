@@ -1,6 +1,8 @@
 {
     "search_placeholder": "Введите название страны",
     "nothing_found": "Ничего не найдено",
+    "change_language_title": "Сменить язык",
+    "delete_title": "Удалить",
     "home_page": "Главная",
     "read_more": "Подробнее",
     "last_data_update": "Последнее обновление данных:",

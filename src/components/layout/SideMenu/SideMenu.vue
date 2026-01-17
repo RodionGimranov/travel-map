@@ -2,7 +2,7 @@
     <aside
         v-if="sideMenuStore.isOpen"
         ref="sideMenuRef"
-        class="common_side_menu flex h-137.75 flex-col items-start"
+        class="common_side_menu z-50 flex h-137.75 flex-col items-start"
         :class="sideMenuSizeClass"
     >
         <div class="mb-6.5! flex w-full items-start justify-between gap-2">
@@ -12,7 +12,7 @@
                         {{ countriesStore.selectedCountryView?.name }}
                     </template>
                     <template v-else>
-                        {{ $t("sideMenu.side_menu_title") }}
+                        {{ $t("sideMenu.menu_title") }}
                     </template>
                 </p>
                 <Badge

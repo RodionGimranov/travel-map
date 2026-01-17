@@ -1,6 +1,8 @@
 {
     "search_placeholder": "Enter country name",
     "nothing_found": "Nothing found",
+    "change_language_title": "Change language",
+    "delete_title": "Remove",
     "home_page": "Home",
     "read_more": "Read more",
     "last_data_update": "Last data update:",
