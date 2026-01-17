@@ -12,7 +12,9 @@
                 :label="countryBadge.label"
                 :badge-type="countryBadge.badgeType"
             />
-            <DeleteButton @click="emit('remove', iso2)" />
+            <Tooltip tooltipText="common.delete_title" placement="top">
+                <DeleteButton @click="emit('remove', iso2)" />
+            </Tooltip>
         </div>
     </div>
 </template>
@@ -23,6 +25,7 @@ import { useCountryBadge } from "@/composables/useCountryBadge";
 
 import Badge from "@/components/ui/atoms/Badge.vue";
 import DeleteButton from "@/components/ui/atoms/DeleteButton.vue";
+import Tooltip from "@/components/ui/atoms/Tooltip.vue";
 
 const props = defineProps<{
     iso2: string;

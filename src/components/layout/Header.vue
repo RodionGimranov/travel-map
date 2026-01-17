@@ -12,15 +12,14 @@
                     padding-variant="medium"
                 />
             </RouterLink>
-            <Button
-                ref="languageButtonRef"
-                :label="buttonLabel"
-                @mousedown.prevent
-                @click="toggleLanguage"
-            />
-            <Button ref="menuButtonRef" @click="sideMenuStore.toggle('settings')">
-                <SvgIcon name="menu-icon" :width="24" :height="24" />
-            </Button>
+            <Tooltip tooltipText="common.change_language_title" placement="bottom">
+                <Button ref="languageButtonRef" :label="buttonLabel" @click="toggleLanguage" />
+            </Tooltip>
+            <Tooltip tooltipText="sideMenu.menu_title" placement="bottom">
+                <Button ref="menuButtonRef" @click="sideMenuStore.toggle('settings')">
+                    <SvgIcon name="menu-icon" :width="24" :height="24" />
+                </Button>
+            </Tooltip>
         </nav>
     </header>
 </template>
@@ -34,6 +33,7 @@ import { useSideMenuStore } from "@/stores/useSideMenuStore";
 import CountrySearch from "@/components/CountrySearch/CountrySearch.vue";
 import Button from "@/components/ui/atoms/Button.vue";
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+import Tooltip from "@/components/ui/atoms/Tooltip.vue";
 
 const languageStore = useLanguageStore();
 const sideMenuStore = useSideMenuStore();
@@ -42,7 +42,6 @@ const languageButtonRef = ref<HTMLElement | null>(null);
 const menuButtonRef = ref<HTMLElement | null>(null);
 
 const currentLocale = computed(() => languageStore.locale);
-
 const buttonLabel = computed(() => (currentLocale.value === "ru" ? "Ru" : "En"));
 
 const toggleLanguage = () => {
